@@ -1,4 +1,11 @@
-h1 {
-    background-color: $grey-color;
-    color: red;
+.header {
+    height: 113px;
+    .header__logo {
+        text-align: center;
+    }
+    i { 
+        background-color: #EAEAEA;
+        width: 100%;
+        text-align: center;
+    }
 }
