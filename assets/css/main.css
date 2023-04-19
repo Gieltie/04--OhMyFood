@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 h1, h2 {
   font-family: "Shrikhand", cursive;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.875em;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 a {
@@ -8,24 +18,26 @@ a {
   color: var(--black-color);
 }
 
-* {
-  box-shadow: 0 0 0 1px red;
-}
-
+/* * {
+    box-shadow: 0 0 0 1px red inset;
+} */
 body {
   margin: 0;
   padding: 0;
   min-width: 375px;
 }
 
-.header {
-  height: 113px;
+.header__logo {
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.header .header__logo {
-  text-align: center;
-}
-.header i {
+.header__location {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
   background-color: #EAEAEA;
-  width: 100%;
-  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

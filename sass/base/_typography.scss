@@ -5,4 +5,14 @@ $shrikhand: 'Shrikhand', cursive;
 
 h1, h2 {
     font-family: $shrikhand;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.875em;
+}
+
+p {
+    font-family: $roboto;
+    margin: 0;
 }
