@@ -1,0 +1,13 @@
+@import "../utils/variables";
+
+body {
+    background-color: $background-color;
+}
+
+.header__logo, .fonctionnement {
+    background-color: $white-color;
+}
+
+.header__location {
+    background-color: $location-light-grey;
+}

@@ -1,11 +1,8 @@
-@import "../utils/variables";
-
 * {
     box-shadow: 0 0 0 1px red inset;
 }
 
 body  {
-    background-color: $background-color;
     margin: 0;
     padding: 0;
     min-width: 375px;
