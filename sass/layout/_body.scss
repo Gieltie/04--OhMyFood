@@ -3,11 +3,18 @@
 }
 
 body  {
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     padding: 0;
     min-width: 375px;
 }
 
+.main-wrapper {
+    width: 100%;
+}
 img {
     height: 100px;
     width: 100px;

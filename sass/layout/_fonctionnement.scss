@@ -1,4 +1,6 @@
 .fonctionnement {
+    display: flex;
+    flex-direction: column;
     height: 440px;
     &__title {
         padding: 48px 80px 26px 20px;
