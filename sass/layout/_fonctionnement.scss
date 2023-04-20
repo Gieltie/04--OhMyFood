@@ -1,1 +1,6 @@
-@import "../utils/variables";
+.fonctionnement {
+    height: 440px;
+    &__title {
+        padding: 48px 80px 26px 20px;
+    }
+}

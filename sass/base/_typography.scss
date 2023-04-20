@@ -17,3 +17,13 @@ h2, h3, p, span, button {
 p {
     font-weight: 300;
 }
+
+.fonctionnement__wrapper {
+    &--number {
+        font-weight: 500;
+        font-size: 0.886em;
+    }
+    &--text {
+        font-weight: 500;
+    }
+}

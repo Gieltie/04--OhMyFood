@@ -14,6 +14,14 @@ p {
   font-weight: 300;
 }
 
+.fonctionnement__wrapper--number {
+  font-weight: 500;
+  font-size: 0.886em;
+}
+.fonctionnement__wrapper--text {
+  font-weight: 500;
+}
+
 body {
   background-color: #F6F6F6;
 }
@@ -24,12 +32,111 @@ body {
 
 .header__location {
   background-color: #EAEAEA;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
 }
 
-a {
-  text-decoration: none;
+button {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: #FFFFFF;
 }
 
+.fonctionnement__wrapper--numberBox {
+  background-color: #9356DC;
+}
+.fonctionnement__wrapper--number {
+  color: #F6F6F6;
+}
+.fonctionnement__wrapper--btn {
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement__wrapper--btn-logo {
+  color: #7E7E7E;
+}
+.fonctionnement__wrapper .fa-store {
+  color: #9356DC;
+}
+
+.reservation__btn {
+  border: none;
+  border-radius: 25px;
+  width: 218px;
+  height: 50px;
+}
+
+.fonctionnement__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  position: relative;
+  width: 335px;
+  height: 72.38px;
+  margin: 0 20px 24.92px 20px;
+}
+.fonctionnement__wrapper--numberBox {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  z-index: 10;
+}
+.fonctionnement__wrapper--number {
+  position: relative;
+  top: 4px;
+  left: 8px;
+}
+.fonctionnement__wrapper--text {
+  width: 211px;
+  z-index: 10;
+}
+.fonctionnement__wrapper--btn {
+  position: absolute;
+  border-radius: 20px;
+  width: 322.49px;
+  height: 72.38px;
+  left: 12px;
+}
+.fonctionnement__wrapper--btn-logo {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+}
+
+/* *********************** */
+/* .fonctionnement__btn {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    width: 322.49px;
+    height: 72.38px;
+    margin-left: 32.51px;
+    &--box {
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-radius: 15px;
+    }
+    &--number {
+        position: relative;
+        top: 4px;
+        left: 8px;
+    }
+} */
+/* .btn__text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background: red;
+}
+.btn__wrap {
+    z-index: 1;
+    border-radius: 20px;
+    width: 322.49px;
+    height: 72.38px;
+    margin-left: 32.51px;
+} */
 * {
   box-shadow: 0 0 0 1px red inset;
 }
@@ -40,6 +147,18 @@ body {
   min-width: 375px;
 }
 
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.fonctionnement {
+  height: 440px;
+}
+.fonctionnement__title {
+  padding: 48px 80px 26px 20px;
+}
+
 .header__logo {
   height: 63px;
   display: flex;
@@ -47,7 +166,6 @@ body {
   align-items: center;
 }
 .header__location {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -55,5 +173,18 @@ body {
 }
 
 .reservation {
-  color: green;
+  text-align: center;
+}
+.reservation__title {
+  margin: 39.5px 58px 0 42px;
+  width: 275px;
+  height: 68px;
+}
+.reservation__subtitle {
+  margin: 0 26px 27px 34px;
+  width: 315px;
+  height: 46px;
+}
+.reservation__btn {
+  margin: 0 75px 57px 82px;
 }

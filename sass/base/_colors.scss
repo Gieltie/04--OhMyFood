@@ -10,4 +10,29 @@ body {
 
 .header__location {
     background-color: $location-light-grey;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.15) inset; 
+}
+
+button {
+    background: linear-gradient(193.33deg, $btn-dark-purple -11.44%, $btn-light-purple 123.93%);
+    color: $white-color;
+}
+
+.fonctionnement__wrapper {
+    &--numberBox {
+        background-color: $btn-dark-purple;
+    }
+    &--number {
+        color: $background-color;
+    }
+    &--btn {
+        background-color: $background-color;
+        box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
+    }
+    &--btn-logo {
+        color: $btn-icone-grey;
+    }
+    & .fa-store {
+        color: $btn-dark-purple;
+    }
 }

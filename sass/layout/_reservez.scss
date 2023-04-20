@@ -1,3 +1,16 @@
 .reservation {
-    color: green;
+    text-align: center;
+    &__title {
+        margin: 39.5px 58px 0 42px;
+        width: 275px;
+        height: 68px;
+    }
+    &__subtitle {
+        margin: 0 26px 27px 34px;
+        width: 315px;
+        height: 46px;
+    }
+    &__btn {
+        margin: 0 75px 57px 82px;
+    }
 }
