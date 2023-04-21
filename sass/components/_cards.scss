@@ -1,0 +1,31 @@
+.card {
+     position: relative;
+   /* background-color: aquamarine;
+    height: 251px;
+    width: 340px;
+    border-radius: 15px;*/
+    &__img {
+        object-fit: none;
+        height: 231px;
+        width: 346px; 
+    } 
+    &__nouveau {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        width: 80px;
+        height: 29px;
+        border-radius: 2px;
+    }/* 
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+    &__icon {
+
+    } */
+}

@@ -9,7 +9,7 @@ h1 {
     margin: 0;
 }
 
-h2, h3, p, span, button {
+h2, h3, p, a, span, button {
     font-family: $roboto;
     margin: 0;
 }
@@ -18,12 +18,43 @@ p {
     font-weight: 300;
 }
 
-.fonctionnement__wrapper {
-    &--number {
-        font-weight: 500;
-        font-size: 0.886em;
+a {
+    text-decoration: none;
+}
+
+.header__location p {
+    font-weight: 500;
+}
+
+.reservation__subtitle {
+    font-size: 18px;
+}
+
+
+.btn {
+    &__numberBox {
+        &--number {
+            font-weight: 500;
+            font-size: 0.886em;
+        }
     }
-    &--text {
+    &__text {
         font-weight: 500;
     }
+}
+
+.card {
+    &__nouveau {
+        font-size: 14px;
+        font-weight: 500;
+    }/* 
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+    &__icon {
+        
+    } */
 }

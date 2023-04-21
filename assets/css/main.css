@@ -5,7 +5,7 @@ h1 {
   margin: 0;
 }
 
-h2, h3, p, span, button {
+h2, h3, p, a, span, button {
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
@@ -14,16 +14,49 @@ p {
   font-weight: 300;
 }
 
-.fonctionnement__wrapper--number {
+a {
+  text-decoration: none;
+}
+
+.header__location p {
+  font-weight: 500;
+}
+
+.reservation__subtitle {
+  font-size: 18px;
+}
+
+.btn__numberBox--number {
   font-weight: 500;
   font-size: 0.886em;
 }
-.fonctionnement__wrapper--text {
+.btn__text {
+  font-weight: 500;
+}
+
+.card {
+  /* 
+  &__title {
+
+  }
+  &__subtitle {
+
+  }
+  &__icon {
+
+  } */
+}
+.card__nouveau {
+  font-size: 14px;
   font-weight: 500;
 }
 
 body {
   background-color: #F6F6F6;
+}
+
+a {
+  color: #000000;
 }
 
 .header__logo, .fonctionnement {
@@ -36,25 +69,43 @@ body {
 }
 
 button {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
   color: #FFFFFF;
 }
 
-.fonctionnement__wrapper--numberBox {
-  background-color: #9356DC;
-}
-.fonctionnement__wrapper--number {
-  color: #F6F6F6;
-}
-.fonctionnement__wrapper--btn {
+.btn {
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-.fonctionnement__wrapper--btn-logo {
+.btn__numberBox {
+  background-color: #9356DC;
+}
+.btn__numberBox--number {
+  color: #F6F6F6;
+}
+.btn__logo {
   color: #7E7E7E;
 }
-.fonctionnement__wrapper .fa-store {
+.btn .fa-store {
   color: #9356DC;
+}
+
+.card {
+  background-color: #FFFFFF;
+  /* 
+  &__title {
+
+  }
+  &__subtitle {
+
+  }
+  &__icon {
+
+  } */
+}
+.card__nouveau {
+  background-color: #99E2D0;
+  color: #008766;
 }
 
 .reservation__btn {
@@ -64,83 +115,70 @@ button {
   height: 50px;
 }
 
-.fonctionnement__wrapper {
+.btn {
   display: flex;
   align-items: center;
-  gap: 62px;
   position: relative;
-  width: 335px;
-  height: 72.38px;
-  margin: 0 20px 24.92px 20px;
-}
-.fonctionnement__wrapper--numberBox {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
-  z-index: 10;
-}
-.fonctionnement__wrapper--number {
-  position: relative;
-  top: 4px;
-  left: 8px;
-}
-.fonctionnement__wrapper--text {
-  width: 211px;
-  z-index: 10;
-}
-.fonctionnement__wrapper--btn {
-  position: absolute;
-  border-radius: 20px;
   width: 322.49px;
   height: 72.38px;
-  left: 12px;
+  border-radius: 20px;
 }
-.fonctionnement__wrapper--btn-logo {
+.btn__numberBox {
   position: absolute;
-  top: 45%;
-  left: 10%;
+  left: -12px;
+  height: 24px;
+  width: 24px;
+  border-radius: 12px;
+}
+.btn__numberBox--number {
+  position: absolute;
+  top: 5.09px;
+  left: 8px;
+}
+.btn__logo {
+  position: absolute;
+  left: 33.5px;
+}
+.btn__text {
+  margin-left: 74px;
 }
 
-/* *********************** */
-/* .fonctionnement__btn {
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    width: 322.49px;
-    height: 72.38px;
-    margin-left: 32.51px;
-    &--box {
-        width: 24px;
-        height: 24px;
-        margin-left: -12px;
-        border-radius: 15px;
-    }
-    &--number {
-        position: relative;
-        top: 4px;
-        left: 8px;
-    }
-} */
-/* .btn__text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    background: red;
+.card {
+  position: relative;
+  /* background-color: aquamarine;
+   height: 251px;
+   width: 340px;
+   border-radius: 15px;*/
+  /* 
+  &__title {
+
+  }
+  &__subtitle {
+
+  }
+  &__icon {
+
+  } */
 }
-.btn__wrap {
-    z-index: 1;
-    border-radius: 20px;
-    width: 322.49px;
-    height: 72.38px;
-    margin-left: 32.51px;
-} */
-* {
-  box-shadow: 0 0 0 1px red inset;
+.card__img {
+  object-fit: none;
+  height: 231px;
+  width: 346px;
+}
+.card__nouveau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
 }
 
+/* * {
+    box-shadow: 0 0 0 1px red inset;
+} */
 body {
   display: flex;
   flex-direction: column;
@@ -149,28 +187,37 @@ body {
   margin: auto;
   padding: 0;
   min-width: 375px;
-  max-width: 1440px;
+  max-width: 768px;
 }
 
 .main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
-img {
-  height: 100px;
-  width: 100px;
-}
-
 .fonctionnement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.fonctionnement__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
   height: 440px;
 }
-.fonctionnement__title {
-  padding: 48px 80px 26px 20px;
+.fonctionnement__wrap--title {
+  margin: 48px 80px 26px 20px;
 }
-.fonctionnement__main__wrapper {
+
+.btn__box {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
 }
 
 footer {
@@ -198,17 +245,30 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 .reservation__title {
   margin: 39.5px 58px 0 42px;
-  width: 275px;
-  height: 68px;
 }
 .reservation__subtitle {
-  margin: 0 26px 27px 34px;
-  width: 315px;
-  height: 46px;
+  margin: 18px 26px 27px 34px;
 }
 .reservation__btn {
   margin: 0 75px 57px 82px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.restaurants__title {
+  width: 100%;
+}
+.restaurants__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  gap: 18px;
 }

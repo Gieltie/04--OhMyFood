@@ -4,6 +4,10 @@ body {
     background-color: $background-color;
 }
 
+a {
+    color: $black-color;
+}
+
 .header__logo, .fonctionnement {
     background-color: $white-color;
 }
@@ -14,25 +18,40 @@ body {
 }
 
 button {
-    background: linear-gradient(193.33deg, $btn-dark-purple -11.44%, $btn-light-purple 123.93%);
+    background: linear-gradient(193.33deg, $btn-light-purple -11.44%, $btn-dark-purple 123.93%);
     color: $white-color;
 }
 
-.fonctionnement__wrapper {
-    &--numberBox {
+.btn {
+    background-color: $background-color;
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
+    &__numberBox {
         background-color: $btn-dark-purple;
+        &--number {
+            color: $background-color;
+        }
     }
-    &--number {
-        color: $background-color;
-    }
-    &--btn {
-        background-color: $background-color;
-        box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
-    }
-    &--btn-logo {
+    &__logo {
         color: $btn-icone-grey;
     }
     & .fa-store {
         color: $btn-dark-purple;
     }
+}
+
+.card {
+    background-color: $white-color;
+    &__nouveau {
+        background-color: $btn-light-green;
+        color: $btn-dark-green;
+    }/* 
+    &__title {
+
+    }
+    &__subtitle {
+
+    }
+    &__icon {
+
+    } */
 }

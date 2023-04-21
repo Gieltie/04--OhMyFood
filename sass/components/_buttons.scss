@@ -5,79 +5,30 @@
     height: 50px;
 }
 
-.fonctionnement__wrapper {
+.btn {
     display: flex;
     align-items: center;
-    gap: 62px;
     position: relative;
-    width: 335px;
+    width: 322.49px;
     height: 72.38px;
-    margin: 0 20px 24.92px 20px;
-    &--numberBox {
-        width: 24px;
+    border-radius: 20px;
+    &__numberBox {
+        position: absolute;
+        left: -12px;
         height: 24px;
+        width: 24px;
         border-radius: 12px;
-        z-index: 10;
+        &--number {
+            position: absolute;
+            top: 5.09px;
+            left: 8px;
+        }
     }
-    &--number {
-        position: relative;
-        top: 4px;
-        left: 8px;
-    }
-    &--text {
-        width: 211px;
-        z-index: 10;
-    }
-    &--btn {
+    &__logo {
         position: absolute;
-        border-radius: 20px;
-        width: 322.49px;
-        height: 72.38px;
-        left: 12px;
+        left: 33.5px;
     }
-    &--btn-logo {
-        position: absolute;
-        top: 45%;
-        left: 10%;
+    &__text {
+        margin-left: 74px;
     }
 }
-
-/* *********************** */
-
-
-/* .fonctionnement__btn {
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    width: 322.49px;
-    height: 72.38px;
-    margin-left: 32.51px;
-    &--box {
-        width: 24px;
-        height: 24px;
-        margin-left: -12px;
-        border-radius: 15px;
-    }
-    &--number {
-        position: relative;
-        top: 4px;
-        left: 8px;
-    }
-} */
-
-/* .btn__text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    background: red;
-}
-.btn__wrap {
-    z-index: 1;
-    border-radius: 20px;
-    width: 322.49px;
-    height: 72.38px;
-    margin-left: 32.51px;
-} */
