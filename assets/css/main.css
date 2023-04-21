@@ -149,6 +149,7 @@ body {
   margin: auto;
   padding: 0;
   min-width: 375px;
+  max-width: 1440px;
 }
 
 .main-wrapper {
@@ -161,12 +162,15 @@ img {
 }
 
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
   height: 440px;
 }
 .fonctionnement__title {
   padding: 48px 80px 26px 20px;
+}
+.fonctionnement__main__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer {
