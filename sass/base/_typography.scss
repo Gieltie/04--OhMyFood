@@ -31,7 +31,7 @@ a {
 }
 
 
-.btn {
+.fonctionnement__btn {
     &__numberBox {
         &--number {
             font-weight: 500;
@@ -47,14 +47,11 @@ a {
     &__nouveau {
         font-size: 14px;
         font-weight: 500;
-    }/* 
+    }
     &__title {
-
+        font-size: 1.125em;
     }
     &__subtitle {
-
+        font-size: 1.063em;
     }
-    &__icon {
-        
-    } */
 }

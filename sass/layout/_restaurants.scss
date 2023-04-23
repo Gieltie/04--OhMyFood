@@ -2,14 +2,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    &__wrap {
+        width: 375px;
+    }
     &__title {
-        width: 100%;
+       margin: 54px 80px 28px 20px;
     }
     &__wrapper {
         display: flex;
         flex-direction: column;
-        width: 340px;
+        align-items: center;
         gap: 18px;
+        margin-bottom: 66px;
     }
 }
