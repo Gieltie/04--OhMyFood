@@ -3,13 +3,16 @@
 $roboto: 'Roboto', sans-serif;
 $shrikhand: 'Shrikhand', cursive;
 
-h1 {
+h1, h4 {
     font-family: $shrikhand;
-    font-size: 1.875em;
     margin: 0;
 }
 
-h2, h3, p, a, span, button {
+h1 {
+    font-size: 1.875em;
+}
+
+h2, h3, p, a, span, button, li {
     font-family: $roboto;
     margin: 0;
 }
@@ -20,6 +23,16 @@ p {
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h4, li {
+    font-weight: 400;
 }
 
 .header__location p {
@@ -53,5 +66,14 @@ a {
     }
     &__subtitle {
         font-size: 1.063em;
+    }
+}
+
+.footer {
+    &__title {
+        font-size: 1.125em;
+    }
+    .strong {
+        font-weight: 500;
     }
 }

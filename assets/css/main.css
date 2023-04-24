@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-h1 {
+h1, h4 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.875em;
   margin: 0;
 }
 
-h2, h3, p, a, span, button {
+h1 {
+  font-size: 1.875em;
+}
+
+h2, h3, p, a, span, button, li {
   font-family: "Roboto", sans-serif;
   margin: 0;
 }
@@ -16,6 +19,16 @@ p {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h4, li {
+  font-weight: 400;
 }
 
 .header__location p {
@@ -43,6 +56,13 @@ a {
 }
 .card__subtitle {
   font-size: 1.063em;
+}
+
+.footer__title {
+  font-size: 1.125em;
+}
+.footer .strong {
+  font-weight: 500;
 }
 
 body {
@@ -86,20 +106,15 @@ button {
 
 .card {
   background-color: #FFFFFF;
-  /* 
-  &__title {
-
-  }
-  &__subtitle {
-
-  }
-  &__icon {
-
-  } */
 }
 .card__nouveau {
   background-color: #99E2D0;
   color: #008766;
+}
+
+footer {
+  background-color: #353535;
+  color: #FFFFFF;
 }
 
 .reservation__btn {
@@ -223,7 +238,25 @@ body {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+  gap: 16px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__list--item {
+  display: flex;
+  align-items: center;
 }
 
 .header {

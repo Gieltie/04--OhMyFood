@@ -44,14 +44,10 @@ button {
     &__nouveau {
         background-color: $btn-light-green;
         color: $btn-dark-green;
-    }/* 
-    &__title {
-
     }
-    &__subtitle {
+}
 
-    }
-    &__icon {
-
-    } */
+footer {
+    background-color: $footer-grey-color;
+    color: $white-color;
 }
