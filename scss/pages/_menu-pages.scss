@@ -1,0 +1,7 @@
+.banner {
+    & img {
+        margin:  auto;
+        object-fit: contain;
+        height: 275px;
+    }
+}

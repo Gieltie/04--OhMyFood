@@ -90,7 +90,7 @@ header, .fonctionnement {
 }
 
 button {
-  background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-light-purple) 123.93%);
+  background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
   color: var(--white-color);
 }
 
@@ -294,4 +294,10 @@ footer {
 .footer__list--item {
   display: flex;
   align-items: center;
+}
+
+.banner img {
+  margin: auto;
+  object-fit: contain;
+  height: 275px;
 }
