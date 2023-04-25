@@ -1,0 +1,58 @@
+:root {
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+
+    --background-color: #F6F6F6;
+    --location-light-grey: #EAEAEA;
+    --footer-grey-color : #353535;
+
+    --btn-light-green: #99E2D0;
+    --btn-dark-green: #008766;
+    --btn-dark-purple: #9356DC;
+    --btn-light-purple: #FF79DA;
+    --btn-icone-grey: #7E7E7E;
+}
+
+header, .fonctionnement {
+    background-color: var(--white-color);
+}
+
+.header__location {
+    background-color: var(--location-light-grey);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.15) inset; 
+}
+
+button {
+    background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-light-purple) 123.93%);
+    color: var(--white-color);
+}
+
+.fonctionnement__btn {
+    background-color: var(--background-color);
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
+    &__numberBox {
+        background-color: var(--btn-dark-purple);
+        &--number {
+            color: var(--background-color);
+        }
+    }
+    &__logo {
+        color: var(--btn-icone-grey);
+    }
+    & .fa-store {
+        color: var(--btn-dark-purple);
+    }
+}
+
+.card {
+    background-color: var(--white-color);
+    &__nouveau {
+        background-color: var(--btn-light-green);
+        color: var(--btn-dark-green);
+    }
+}
+
+footer {
+    background-color: var(--footer-grey-color);
+    color: var(--white-color);
+}
