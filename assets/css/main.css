@@ -52,6 +52,10 @@ h1 {
   font-weight: 300;
 }
 
+.reservation a {
+  color: var(--white-color);
+}
+
 .btn {
   font-family: "Roboto", sans-serif;
   font-size: 1em;
@@ -90,12 +94,13 @@ header, .fonctionnement {
 
 .header__location {
   background-color: var(--location-light-grey);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
-button {
+.reservation__btn {
   background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
   color: var(--white-color);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .fonctionnement__btn {
@@ -129,7 +134,9 @@ footer {
 }
 
 .reservation__btn {
-  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 25px;
   width: 218px;
   height: 50px;
