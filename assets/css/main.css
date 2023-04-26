@@ -34,6 +34,10 @@ a, a:visited, a:active {
   color: var(--black-color);
 }
 
+li a {
+  color: var(--white-color);
+}
+
 h1, h4 {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
