@@ -18,20 +18,23 @@ body {
   max-width: 768px;
 }
 
-.main-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-h1, h2, h3, h4, p, a, li {
+/* .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+} */
+h1, h2, h3, h4, p, ul, li {
   margin: 0;
+  padding: 0;
 }
 
 a, a:visited, a:active {
   text-decoration: none;
-  color: var(--black-color);
+}
+
+li {
+  font-weight: 400;
 }
 
 li a {
@@ -45,34 +48,6 @@ h1, h4 {
 
 h1 {
   font-size: 1.875em;
-}
-
-.reservation p {
-  font-size: 1.125em;
-  font-weight: 300;
-}
-
-.reservation a {
-  color: var(--white-color);
-}
-
-.btn {
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
-}
-.btn span {
-  font-size: 0.886em;
-}
-
-.card__nouveau {
-  font-size: 0.875em;
-}
-.card h3 {
-  font-size: 1.125em;
-}
-.card p {
-  font-size: 1.063em;
-  font-weight: 300;
 }
 
 :root {
@@ -97,60 +72,44 @@ header, .fonctionnement {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15) inset;
 }
 
-.reservation__btn {
-  background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
-  color: var(--white-color);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.fonctionnement__btn {
-  background-color: var(--background-color);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-}
-.fonctionnement__btn__numberBox {
-  background-color: var(--btn-dark-purple);
-}
-.fonctionnement__btn__numberBox--number {
-  color: var(--background-color);
-}
-.fonctionnement__btn__logo {
-  color: var(--btn-icone-grey);
-}
-.fonctionnement__btn .fa-store {
-  color: var(--btn-dark-purple);
-}
-
-.card {
-  background-color: var(--white-color);
-}
-.card__nouveau {
-  background-color: var(--btn-light-green);
-  color: var(--btn-dark-green);
-}
-
 footer {
   background-color: var(--footer-grey-color);
   color: var(--white-color);
 }
 
-.reservation__btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+.reservez__btn {
+  display: inline-block;
+  background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
+  color: var(--white-color);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  width: 218px;
-  height: 50px;
+  padding: 13px 18.75px;
+}
+.reservez__btn:hover {
+  background: linear-gradient(193.33deg, var(--btn-dark-purple) -11.44%, var(--btn-light-purple) 123.93%);
+}
+.reservez__btn:active {
+  position: relative;
+  top: 1px;
 }
 
 .fonctionnement__btn {
   display: flex;
   align-items: center;
   position: relative;
+  background-color: var(--background-color);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   width: 322.49px;
   height: 72.38px;
   border-radius: 20px;
 }
 .fonctionnement__btn__numberBox {
+  background-color: var(--btn-dark-purple);
   position: absolute;
   left: -12px;
   height: 24px;
@@ -158,31 +117,42 @@ footer {
   border-radius: 12px;
 }
 .fonctionnement__btn__numberBox--number {
+  font-size: 0.886em;
+  color: var(--background-color);
   position: absolute;
   top: 5.09px;
   left: 8px;
 }
 .fonctionnement__btn__logo {
+  color: var(--btn-icone-grey);
   position: absolute;
   left: 33.5px;
 }
 .fonctionnement__btn__text {
   margin-left: 74px;
 }
+.fonctionnement__btn .fa-store {
+  color: var(--btn-dark-purple);
+}
 
 .card {
+  background-color: var(--white-color);
+  color: var(--black-color);
   position: relative;
-  width: 340px;
   border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .card__img {
   object-fit: cover;
   width: 346px;
   height: 231px;
-  margin: -57px -3px 0 -3px;
+  margin: -57px -3px -4px -3px;
 }
 .card__nouveau {
+  font-size: 0.875em;
+  background-color: var(--btn-light-green);
+  color: var(--btn-dark-green);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,14 +164,17 @@ footer {
   border-radius: 2px;
 }
 .card__title {
+  font-size: 1.125em;
   margin: 16px 60px 5px 13px;
 }
 .card__subtitle {
+  font-size: 1.063em;
+  font-weight: 300;
+  height: 24px;
   margin: 0 80px 12px 13px;
 }
 .card__icon {
   display: flex;
-  justify-content: center;
   align-items: center;
   position: absolute;
   width: 22px;
@@ -226,20 +199,19 @@ footer {
   align-items: center;
 }
 
-.reservation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.reservez {
   text-align: center;
-  width: 100%;
 }
-.reservation__title {
+.reservez__title {
   margin: 39.5px 58px 0 42px;
+  padding-bottom: 18px;
 }
-.reservation__subtitle {
-  margin: 18px 26px 27px 34px;
+.reservez__subtitle {
+  font-size: 1.125em;
+  font-weight: 300;
+  margin: 0px 26px 27px 34px;
 }
-.reservation__btn {
+.reservez__btn {
   margin: 0 75px 57px 82px;
 }
 
@@ -247,23 +219,20 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 .fonctionnement__wrap {
-  display: flex;
-  flex-direction: column;
   width: 375px;
   height: 440px;
 }
 .fonctionnement__wrap--title {
   margin: 48px 80px 26px 20px;
 }
-
-.btn__box {
+.fonctionnement__wrap--box {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  margin-left: 12px;
 }
 
 .restaurants {
@@ -273,6 +242,7 @@ footer {
 }
 .restaurants__wrap {
   width: 375px;
+  margin-bottom: 66px;
 }
 .restaurants__title {
   margin: 54px 80px 28px 20px;
@@ -282,13 +252,6 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  margin-bottom: 66px;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
 }
 
 .footer {
@@ -305,6 +268,10 @@ footer {
 .footer__list--item {
   display: flex;
   align-items: center;
+  list-style: none;
+}
+.footer__list .strong {
+  font-weight: 500;
 }
 
 .banner img {

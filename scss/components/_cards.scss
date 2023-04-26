@@ -1,15 +1,20 @@
 .card {
+    background-color: var(--white-color);
+    color: var(--black-color);
     position: relative;
-    width: 340px;
     border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     &__img {
         object-fit: cover;
         width: 346px; 
         height: 231px;
-        margin: -57px -3px 0 -3px;
+        margin: -57px -3px -4px -3px;
     } 
     &__nouveau {
+        font-size: 0.875em;
+        background-color: var(--btn-light-green);
+        color: var(--btn-dark-green);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -21,15 +26,18 @@
         border-radius: 2px;
     } 
     &__title {
+        font-size: 1.125em;
         margin: 16px 60px 5px 13px;
 
     }
     &__subtitle {
+        font-size: 1.063em;
+        font-weight: 300;
+        height: 24px;
         margin: 0 80px 12px 13px;
     }
     &__icon {
         display: flex;
-        justify-content: center;
         align-items: center;
         position: absolute;
         width: 22px;

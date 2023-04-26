@@ -1,12 +1,16 @@
 @use '../util' as u;
 
-h1, h2, h3, h4, p, a, li {
+h1, h2, h3, h4, p, ul, li {
     margin: 0;
+    padding: 0;
 }
 
 a, a:visited, a:active  {
     text-decoration: none;
-    color: var(--black-color);
+}
+
+li {
+    font-weight: 400;
 }
 
 li a {
@@ -20,35 +24,4 @@ h1, h4 {
 
 h1 {
     font-size: 1.875em;
-}
-
-
-.reservation p {
-    font-size: 1.125em;
-    font-weight: 300;
-}
-
-.reservation a {
-    color: var(--white-color);
-}
-
-.btn {
-    font-family: u.$font-roboto;
-    font-size: 1em;
-    & span {
-        font-size: 0.886em;
-    }
-}
-
-.card {
-    &__nouveau {
-        font-size: 0.875em;
-    }
-    & h3{
-        font-size: 1.125em;
-    }
-    & p{
-        font-size: 1.063em;
-        font-weight: 300;
-    }
 }

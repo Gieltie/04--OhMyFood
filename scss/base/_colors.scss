@@ -22,37 +22,6 @@ header, .fonctionnement {
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15) inset; 
 }
 
-.reservation__btn {
-    background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
-    color: var(--white-color);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-}
-
-.fonctionnement__btn {
-    background-color: var(--background-color);
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    &__numberBox {
-        background-color: var(--btn-dark-purple);
-        &--number {
-            color: var(--background-color);
-        }
-    }
-    &__logo {
-        color: var(--btn-icone-grey);
-    }
-    & .fa-store {
-        color: var(--btn-dark-purple);
-    }
-}
-
-.card {
-    background-color: var(--white-color);
-    &__nouveau {
-        background-color: var(--btn-light-green);
-        color: var(--btn-dark-green);
-    }
-}
-
 footer {
     background-color: var(--footer-grey-color);
     color: var(--white-color);
