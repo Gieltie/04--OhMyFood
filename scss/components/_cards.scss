@@ -1,10 +1,23 @@
+@use '../util/' as u;
+
+$white-card: #FFF;
+$black-card: #000;
+$btn-green-light: #99E2D0;
+$btn-green-dark: #008766;
+$heart-purple-dark: #9356DC;
+$heart-purple-light: #FF79DA;
+
 .card {
-    background-color: var(--white-color);
-    color: var(--black-color);
+    background-color: $white-card;
+    color: $black-card;
     position: relative;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    @include u.shadow(4px, 15px, 0.1, 15px);
+    transition-property: transform;
+    transition: transform 500ms ease-in-out;
+    &:hover {
+        transform: scale(1.10);
+    }
     &__img {
         object-fit: cover;
         width: 346px; 
@@ -13,8 +26,8 @@
     } 
     &__nouveau {
         font-size: 0.875em;
-        background-color: var(--btn-light-green);
-        color: var(--btn-dark-green);
+        background-color: $btn-green-light;
+        color: $btn-green-dark;
         display: flex;
         justify-content: center;
         align-items: center;

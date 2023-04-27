@@ -1,23 +1,26 @@
 @use '../util/' as u;
 
-.btn {
-    font-family: u.$font-roboto;
-    font-size: 1em;
-}
+$white: #FFFFFF;
+$btn-dark-purple: #9356DC;
+$btn-light-purple: #FF79DA;
+$btn-icone-grey: #7E7E7E;
 
 .reservez__btn {
     display: inline-block;
-    background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
-    color: var(--white-color);
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    padding: 13px 18.75px;
+    background: linear-gradient(193.33deg, $btn-light-purple -11.44%, $btn-dark-purple 123.93%);
+    color: $white;
+    padding: 0.81em;
+    width: 13.6em;
+    text-align: center;
+    @include u.shadow(0.25em, 0.62em, 0.25, 1.56em);
+    transition-property: transform;
+    transition: transform 500ms ease-in-out;
     &:hover {
-        background: linear-gradient(193.33deg, var(--btn-dark-purple) -11.44%, var(--btn-light-purple) 123.93%);
-    }
-    &:active {
-        position:relative;
-        top:1px;
+        transform: scale(1.15);
+        background: linear-gradient(193.33deg, $btn-dark-purple -11.44%, $btn-light-purple 123.93%);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 25px;
+        transform: matrix(1, 0, 0, -1, 0, 0);
     }
 }
 
@@ -26,12 +29,16 @@
     align-items: center;
     position: relative;
     background-color: var(--background-color);
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
     width: 322.49px;
     height: 72.38px;
-    border-radius: 20px;
+    @include u.shadow(4px, 15px, 0.15, 20px);
+    transition-property: transform;
+    transition: transform 500ms ease-in-out;
+    &:hover {
+        transform: scale(1.15);
+    }
     &__numberBox {
-        background-color: var(--btn-dark-purple);
+        background-color: $btn-dark-purple;
         position: absolute;
         left: -12px;
         height: 24px;
@@ -39,14 +46,14 @@
         border-radius: 12px;
         &--number {
             font-size: 0.886em;
-            color: var(--background-color);
+            color: $white;
             position: absolute;
             top: 5.09px;
             left: 8px;
         }
     }
     &__logo {
-        color: var(--btn-icone-grey);
+        color: $btn-icone-grey;
         position: absolute;
         left: 33.5px;
     }
@@ -54,6 +61,6 @@
         margin-left: 74px;
     }
     & .fa-store {
-        color: var(--btn-dark-purple);
+        color: $btn-dark-purple;
     }
 }

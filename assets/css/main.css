@@ -51,16 +51,9 @@ h1 {
 }
 
 :root {
-  --black-color: #000000;
-  --white-color: #FFFFFF;
   --background-color: #F6F6F6;
   --location-light-grey: #EAEAEA;
   --footer-grey-color: #353535;
-  --btn-light-green: #99E2D0;
-  --btn-dark-green: #008766;
-  --btn-dark-purple: #9356DC;
-  --btn-light-purple: #FF79DA;
-  --btn-icone-grey: #7E7E7E;
 }
 
 header, .fonctionnement {
@@ -77,25 +70,24 @@ footer {
   color: var(--white-color);
 }
 
-.btn {
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
-}
-
 .reservez__btn {
   display: inline-block;
-  background: linear-gradient(193.33deg, var(--btn-light-purple) -11.44%, var(--btn-dark-purple) 123.93%);
-  color: var(--white-color);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  padding: 13px 18.75px;
+  background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
+  color: #FFFFFF;
+  padding: 0.81em;
+  width: 13.6em;
+  text-align: center;
+  box-shadow: 0px 0.25em 0.62em 0px rgba(0, 0, 0, 0.25);
+  border-radius: 1.56em;
+  transition-property: transform;
+  transition: transform 500ms ease-in-out;
 }
 .reservez__btn:hover {
-  background: linear-gradient(193.33deg, var(--btn-dark-purple) -11.44%, var(--btn-light-purple) 123.93%);
-}
-.reservez__btn:active {
-  position: relative;
-  top: 1px;
+  transform: scale(1.15);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
 .fonctionnement__btn {
@@ -103,13 +95,18 @@ footer {
   align-items: center;
   position: relative;
   background-color: var(--background-color);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   width: 322.49px;
   height: 72.38px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  transition-property: transform;
+  transition: transform 500ms ease-in-out;
+}
+.fonctionnement__btn:hover {
+  transform: scale(1.15);
 }
 .fonctionnement__btn__numberBox {
-  background-color: var(--btn-dark-purple);
+  background-color: #9356DC;
   position: absolute;
   left: -12px;
   height: 24px;
@@ -118,13 +115,13 @@ footer {
 }
 .fonctionnement__btn__numberBox--number {
   font-size: 0.886em;
-  color: var(--background-color);
+  color: #FFFFFF;
   position: absolute;
   top: 5.09px;
   left: 8px;
 }
 .fonctionnement__btn__logo {
-  color: var(--btn-icone-grey);
+  color: #7E7E7E;
   position: absolute;
   left: 33.5px;
 }
@@ -132,16 +129,21 @@ footer {
   margin-left: 74px;
 }
 .fonctionnement__btn .fa-store {
-  color: var(--btn-dark-purple);
+  color: #9356DC;
 }
 
 .card {
-  background-color: var(--white-color);
-  color: var(--black-color);
+  background-color: #FFF;
+  color: #000;
   position: relative;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition-property: transform;
+  transition: transform 500ms ease-in-out;
+}
+.card:hover {
+  transform: scale(1.1);
 }
 .card__img {
   object-fit: cover;
@@ -151,8 +153,8 @@ footer {
 }
 .card__nouveau {
   font-size: 0.875em;
-  background-color: var(--btn-light-green);
-  color: var(--btn-dark-green);
+  background-color: #99E2D0;
+  color: #008766;
   display: flex;
   justify-content: center;
   align-items: center;
