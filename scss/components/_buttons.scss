@@ -1,25 +1,19 @@
 @use '../util/' as u;
 
-$white: #FFFFFF;
-$btn-dark-purple: #9356DC;
-$btn-light-purple: #FF79DA;
-$btn-icone-grey: #7E7E7E;
-
 .reservez__btn {
     display: inline-block;
-    background: linear-gradient(193.33deg, $btn-light-purple -11.44%, $btn-dark-purple 123.93%);
-    color: $white;
-    padding: 0.81em;
-    width: 13.6em;
+    background: linear-gradient(193.33deg, var(--btn-purple-light) -11.44%, var(--btn-purple-dark) 123.93%);
+    color: var(--white);
+    padding: u.rem(13);
+    width: u.rem(218);
     text-align: center;
-    @include u.shadow(0.25em, 0.62em, 0.25, 1.56em);
+    @include u.shadow(u.rem(4), u.rem(10), 0.25, u.rem(25));
     transition-property: transform;
     transition: transform 500ms ease-in-out;
     &:hover {
         transform: scale(1.15);
-        background: linear-gradient(193.33deg, $btn-dark-purple -11.44%, $btn-light-purple 123.93%);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 25px;
+        background: linear-gradient(193.33deg, var(--btn-purple-dark) -11.44%, var(--btn-purple-light) 123.93%);
+        @include u.shadow(u.rem(4), u.rem(10), 0.25, u.rem(25));
         transform: matrix(1, 0, 0, -1, 0, 0);
     }
 }
@@ -29,38 +23,38 @@ $btn-icone-grey: #7E7E7E;
     align-items: center;
     position: relative;
     background-color: var(--background-color);
-    width: 322.49px;
-    height: 72.38px;
-    @include u.shadow(4px, 15px, 0.15, 20px);
+    width: u.rem(322.49);
+    height: u.rem(72.38);
+    @include u.shadow(u.rem(4), u.rem(15), 0.15, u.rem(20));
     transition-property: transform;
     transition: transform 500ms ease-in-out;
     &:hover {
         transform: scale(1.15);
     }
     &__numberBox {
-        background-color: $btn-dark-purple;
+        background-color: var(--btn-purple-dark);
         position: absolute;
-        left: -12px;
-        height: 24px;
-        width: 24px;
-        border-radius: 12px;
+        left: u.rem(-12);
+        height: u.rem(24);
+        width: u.rem(24);
+        border-radius: u.rem(12);
         &--number {
-            font-size: 0.886em;
-            color: $white;
+            font-size: u.rem(14.18);/* 0.886em */
+            color: var(--white);
             position: absolute;
-            top: 5.09px;
-            left: 8px;
+            top: u.rem(5.09);
+            left: u.rem(8);
         }
     }
     &__logo {
-        color: $btn-icone-grey;
+        color: var(--btn-icone-grey);
         position: absolute;
-        left: 33.5px;
+        left: u.rem(33.5);
     }
     &__text {
-        margin-left: 74px;
+        margin-left: u.rem(74);
     }
     & .fa-store {
-        color: $btn-dark-purple;
+        color: var(--btn-purple-dark);
     }
 }

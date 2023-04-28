@@ -1,18 +1,11 @@
 @use '../util/' as u;
 
-$white-card: #FFF;
-$black-card: #000;
-$btn-green-light: #99E2D0;
-$btn-green-dark: #008766;
-$heart-purple-dark: #9356DC;
-$heart-purple-light: #FF79DA;
-
 .card {
-    background-color: $white-card;
-    color: $black-card;
+    background-color: var(--background-color);
+    color: var(--black);
     position: relative;
     overflow: hidden;
-    @include u.shadow(4px, 15px, 0.1, 15px);
+    @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
     transition-property: transform;
     transition: transform 500ms ease-in-out;
     &:hover {
@@ -20,42 +13,42 @@ $heart-purple-light: #FF79DA;
     }
     &__img {
         object-fit: cover;
-        width: 346px; 
-        height: 231px;
-        margin: -57px -3px -4px -3px;
+        width: u.rem(346); 
+        height: u.rem(231);
+        margin: u.rem(-57) u.rem(-3)u.rem(-4)u.rem(-3);
     } 
     &__nouveau {
-        font-size: 0.875em;
-        background-color: $btn-green-light;
-        color: $btn-green-dark;
+        font-size: u.rem(14);
+        background-color: var(--btn-green-light);
+        color: var(--btn-green-dark);
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 80px;
-        height: 29px;
-        top: 13px;
-        left: 251px;
-        border-radius: 2px;
+        width: u.rem(80);
+        height: u.rem(29);
+        top: u.rem(13);
+        left: u.rem(251);
+        border-radius: u.rem(2);
     } 
     &__title {
-        font-size: 1.125em;
-        margin: 16px 60px 5px 13px;
+        font-size: u.rem(18);
+        margin: u.rem(16) u.rem(60) u.rem(5) u.rem(13);
 
     }
     &__subtitle {
-        font-size: 1.063em;
+        font-size: u.rem(17);
         font-weight: 300;
-        height: 24px;
-        margin: 0 80px 12px 13px;
+        height: u.rem(24);
+        margin: 0 u.rem(80) u.rem(12) u.rem(13);
     }
     &__icon {
         display: flex;
         align-items: center;
         position: absolute;
-        width: 22px;
-        height: 21px;
-        bottom: 33px;
-        right: 25px;
+        width: u.rem(22);
+        height: u.rem(21);
+        bottom: u.rem(33);
+        right: u.rem(25);
     }
 }

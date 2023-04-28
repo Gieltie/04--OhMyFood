@@ -1,19 +1,14 @@
 :root {
-    --background-color: #F6F6F6;
-    --location-light-grey: #EAEAEA;
-    --footer-grey-color : #353535;
-}
-
-header, .fonctionnement {
-    background-color: var(--white-color);
-}
-
-.header__location {
-    background-color: var(--location-light-grey);
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15) inset; 
-}
-
-footer {
-    background-color: var(--footer-grey-color);
-    color: var(--white-color);
+    --black: #000000;
+    --white: #FFFFFF;
+    
+    --background-color: #F7F7F7;
+    --background-grey-light: #EAEAEA;
+    --background-grey-dark : #353535;
+    
+    --btn-purple-dark: #9356DC;
+    --btn-purple-light: #FF79DA;
+    --btn-icone-grey: #7E7E7E;
+    --btn-green-light: #99E2D0;
+    --btn-green-dark: #008766;
 }

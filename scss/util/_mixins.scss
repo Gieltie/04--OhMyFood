@@ -1,4 +1,4 @@
 @mixin shadow($y, $blur, $alpha, $radius) {
-    box-shadow: 0px $y $blur 0px rgba(0, 0, 0, $alpha);
+    box-shadow: 0 $y $blur 0 rgba(0, 0, 0, $alpha);
     border-radius: $radius;
 };

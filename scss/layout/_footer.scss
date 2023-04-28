@@ -1,16 +1,23 @@
+@use '../util/' as u;
+
 .footer {
+    background-color: var(--background-grey-dark);
+    color: var(--white);
     display: flex;
     flex-direction: column;
-    padding: 22px 25px;
-    gap: 16px;
+    padding: u.rem(22) u.rem(25);
+    gap: u.rem(16);
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: u.rem(7);
         &--item {
             display: flex;
             align-items: center;
             list-style: none; 
+        }
+        & a {
+            color: var(--white);
         }
         & .strong {
             font-weight: 500;

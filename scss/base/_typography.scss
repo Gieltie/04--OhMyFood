@@ -13,15 +13,11 @@ li {
     font-weight: 400;
 }
 
-li a {
-    color: var(--white-color);
-}
-
 h1, h4 {
     font-family: u.$font-shirkhand;
     font-weight: 400;
 }
 
 h1 {
-    font-size: 1.875em;
+    font-size: u.em(30);
 }

@@ -1,19 +1,22 @@
+@use '../util/' as u;
+
 .fonctionnement {
    display: flex;
    flex-direction: column;
    align-items: center;
+   background-color: var(--white);
    &__wrap {
-       width: 375px;
-       height: 440px;
+       width: u.rem(375);
+       height: u.rem(440);
        &--title {
-        margin: 48px 80px 26px 20px;
+        margin: u.rem(48) u.rem(80) u.rem(26) u.rem(20);
        }
        &--box {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
-        margin-left: 12px;
+        gap: u.rem(25);
+        margin-left: u.rem(12);
        }
    }
 }
