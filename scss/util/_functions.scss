@@ -1,0 +1,17 @@
+@function rem($pixel) {
+    @if math.is-unitless($pixel) {
+        @return math.div($pixel, 16) + rem;
+    }
+    @else {
+        @error 'Utilise que des chifres pour la fonction rem()!' 
+    }
+}
+
+@function em($pixel) {
+    @if math.is-unitless($pixel) {
+        @return math.div($pixel, 16) + em;
+    }
+    @else {
+        @error 'Utilise que des chifres pour la fonction em()!' 
+    }
+}
