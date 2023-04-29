@@ -8,8 +8,8 @@
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
     transition: all 500ms ease-in-out;
     &:hover {
-        transform: translateY(-1rem);
-        box-shadow: 2px 3px 18px var(--btn-purple-dark);
+        transform: translateY(-0.8rem);
+        box-shadow: 2px 3px 18px var(--btn-green-dark);
     }
     &__img {
         object-fit: cover;

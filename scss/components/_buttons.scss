@@ -26,11 +26,6 @@
     width: u.rem(322.49);
     height: u.rem(72.38);
     @include u.shadow(u.rem(4), u.rem(15), 0.15, u.rem(20));
-    transition-property: transform;
-    transition: transform 500ms ease-in-out;
-    &:hover {
-        transform: scale(1.15);
-    }
     &__numberBox {
         background-color: var(--btn-purple-dark);
         position: absolute;
@@ -39,7 +34,7 @@
         width: u.rem(24);
         border-radius: u.rem(12);
         &--number {
-            font-size: u.rem(14.18);/* 0.886em */
+            font-size: u.rem(14.18);
             color: var(--white);
             position: absolute;
             top: u.rem(5.09);
