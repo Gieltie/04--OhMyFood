@@ -52,3 +52,14 @@
         right: u.rem(25);
     }
 }
+#clock-gradient {
+    opacity: 1.0;
+    display: inline-block;
+    -webkit-transition: opacity .4s ease;
+    -moz-transition: opacity .4s ease;
+    -o-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+ }
+ #clock-gradient:hover {
+    opacity: 1.0;
+ }

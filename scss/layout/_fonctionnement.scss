@@ -1,22 +1,30 @@
 @use '../util/' as u;
 
 .fonctionnement {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: var(--white);
-   &__wrap {
-       width: u.rem(375);
-       height: u.rem(440);
-       &--title {
-        margin: u.rem(48) u.rem(80) u.rem(26) u.rem(20);
+    background-color: var(--white);
+    padding: u.rem(48) u.rem(20);
+    &__title {
+       padding-bottom: u.rem(6);
+       @include u.breakpoint(large) {
+        padding-left: u.rem(180);
        }
-       &--box {
+    }
+    &__wrap {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: u.rem(25);
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+         padding: u.rem(20) 0;
+        @include u.breakpoint(large) {
+        }
+    }
+    &__btn {
         margin-left: u.rem(12);
-       }
-   }
+        width: 30%;
+    }
+}
+
+.test {
+    display: flex;
+    justify-content: center;
 }

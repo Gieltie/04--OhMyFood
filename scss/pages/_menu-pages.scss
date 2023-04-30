@@ -1,9 +1,1 @@
 @use '../util/' as u;
-
-.banner {
-    & img {
-        margin:  auto;
-        object-fit: contain;
-        height: u.rem(275);
-    }
-}

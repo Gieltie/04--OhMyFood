@@ -1,50 +1,23 @@
-.restaurants__wrapper {
-    animation-duration: 3s;
-    animation-name: slidein;
-  }
-  
-  @keyframes slidein {
+@keyframes slidein {
     from {
-      margin-left:50%;
-      width:300%
+    margin-left:50%;
+    width:300%
     }
-  
     to {
-      margin-left:0%;
-      width:100%;
+    margin-left:0%;
+    width:100%;
     }
-  }
+}
 
-  .fonctionnement__btn {
-    animation: grow-and-shrink 2000ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-  }
-
-  @keyframes grow-and-shrink {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.2);
-    }
-  }
-
-  .reservez__btn {
-    animation: drop-in 1000ms;
-  }
-
-  @keyframes drop-in {
+@keyframes drop-in {
     from {
-      transform:
+    transform:
         rotate(-180deg) translateY(-100%);
-      opacity: 0;
+    opacity: 0;
     }
     to {
-      transform:
+    transform:
         rotate(0deg) translateY(0%);
-      opacity: 1;
+    opacity: 1;
     }
-  }
-
+}

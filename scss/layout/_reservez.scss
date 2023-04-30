@@ -2,16 +2,26 @@
 
 .reservez {
     text-align: center;
-    width: 100%;
     &__title {
         margin: u.rem(39.5) u.rem(58) 0 u.rem(42);
+        padding-bottom: u.rem(18);
+        @include u.breakpoint(medium) {
+            margin: u.rem(30) u.rem(0) 0 u.rem(0);
+            font-size: u.rem(40);
+        }
     }
     &__subtitle {
         font-weight: 300;
         font-size: u.rem(18);
-        margin: u.rem(18) u.rem(26) u.rem(27) u.rem(34);
+        margin: 0 u.rem(26) u.rem(27) u.rem(34);
+        @include u.breakpoint(medium) {
+            margin: 0 u.rem(0) u.rem(18) u.rem(0);
+        }
     }
     &__btn {
-        margin: 0 u.rem(75) u.rem(57) u.rem(82);
+        margin-bottom: u.rem(57);
+        @include u.breakpoint(medium) {
+            margin-bottom: u.rem(43);
+        }
     }
 }

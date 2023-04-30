@@ -4,12 +4,12 @@
     display: inline-block;
     background: linear-gradient(193.33deg, var(--btn-purple-light) -11.44%, var(--btn-purple-dark) 123.93%);
     color: var(--white);
-    padding: u.rem(13);
-    width: u.rem(218);
+    padding: u.rem(13) u.rem(18.75);
     text-align: center;
     @include u.shadow(u.rem(4), u.rem(10), 0.25, u.rem(25));
     transition-property: transform;
     transition: transform 500ms ease-in-out;
+    animation: drop-in 1000ms;
     &:hover {
         transform: scale(1.15);
         background: linear-gradient(193.33deg, var(--btn-purple-dark) -11.44%, var(--btn-purple-light) 123.93%);
@@ -23,7 +23,7 @@
     align-items: center;
     position: relative;
     background-color: var(--background-color);
-    width: u.rem(322.49);
+    width: u.rem(295);
     height: u.rem(72.38);
     @include u.shadow(u.rem(4), u.rem(15), 0.15, u.rem(20));
     &__numberBox {
@@ -37,6 +37,8 @@
             font-size: u.rem(14.18);
             color: var(--white);
             position: absolute;
+            width: u.rem(15.27);
+            height: u.rem(14.55);
             top: u.rem(5.09);
             left: u.rem(8);
         }
@@ -48,6 +50,7 @@
     }
     &__text {
         margin-left: u.rem(74);
+        margin-right: u.rem(38);
     }
     & .fa-store {
         color: var(--btn-purple-dark);

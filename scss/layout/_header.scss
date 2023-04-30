@@ -1,20 +1,33 @@
 @use '../util/' as u;
 
 .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white);
     width: 100%;
+    height: u.rem(63);
+    @include u.breakpoint(medium) {
+        height: u.em(96);
+    };
     &__logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: u.rem(63);
+        width: u.rem(162);
+        height: u.rem(44);
+        @include u.breakpoint(medium) {
+            width: u.rem(200);
+        };
     }
     &__location { 
         background-color: var(--background-grey-light);
         height: u.rem(50);
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15) inset;
+        @include u.breakpoint(medium) {
+            box-shadow: none;
+        };
     }
 }
