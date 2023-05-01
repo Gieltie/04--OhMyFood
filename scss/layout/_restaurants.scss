@@ -1,9 +1,6 @@
 @use '../util/' as u;
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     &__wrap {
         width: u.rem(375);
         margin-bottom: u.rem(66);

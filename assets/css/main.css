@@ -52,6 +52,14 @@ body {
   max-width: 90rem;
 }
 
+.container {
+  width: calc(100% - 2.5rem);
+  max-width: 62.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 0;
+}
+
 h1, h2, h3, h4, p, ul, li {
   margin: 0;
   padding: 0;
@@ -128,7 +136,7 @@ h4 {
 }
 @media (min-width: 48em) {
   .reservez__subtitle {
-    margin: 0 0rem 1.125rem 0rem;
+    margin: 0 0rem 1.9375rem 0rem;
   }
 }
 .reservez__btn {
@@ -142,38 +150,15 @@ h4 {
 
 .fonctionnement {
   background-color: var(--white);
-  padding: 3rem 1.25rem;
-}
-.fonctionnement__title {
-  padding-bottom: 0.375rem;
-}
-@media (min-width: 64em) {
-  .fonctionnement__title {
-    padding-left: 11.25rem;
-  }
 }
 .fonctionnement__wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  padding: 1.25rem 0;
-}
-.fonctionnement__btn {
-  margin-left: 0.75rem;
-  width: 30%;
+  gap: 1.5625rem;
+  padding: 1.625rem 0;
 }
 
-.test {
-  display: flex;
-  justify-content: center;
-}
-
-.restaurants {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .restaurants__wrap {
   width: 23.4375rem;
   margin-bottom: 4.125rem;
@@ -240,7 +225,7 @@ h4 {
   align-items: center;
   position: relative;
   background-color: var(--background-color);
-  width: 18.4375rem;
+  width: 19.375rem;
   height: 4.52375rem;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.15);
   border-radius: 1.25rem;

@@ -2,29 +2,11 @@
 
 .fonctionnement {
     background-color: var(--white);
-    padding: u.rem(48) u.rem(20);
-    &__title {
-       padding-bottom: u.rem(6);
-       @include u.breakpoint(large) {
-        padding-left: u.rem(180);
-       }
-    }
     &__wrap {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 25px;
-         padding: u.rem(20) 0;
-        @include u.breakpoint(large) {
-        }
+        gap: u.rem(25);
+        padding: u.rem(26) 0;
     }
-    &__btn {
-        margin-left: u.rem(12);
-        width: 30%;
-    }
-}
-
-.test {
-    display: flex;
-    justify-content: center;
 }
