@@ -1,19 +1,22 @@
 @use '../util/' as u;
 
 .restaurants {
-    &__wrap {
-        width: u.rem(375);
-        margin-bottom: u.rem(66);
-    }
     &__title {
-       margin: u.rem(54) u.rem(80) u.rem(28) u.rem(20);
+       padding-top: u.rem(54);
     }
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr;
         align-items: center;
         gap: u.rem(18);
-        animation-duration: 3s;
-        animation-name: slidein;
+        padding-top: u.rem(28);
+        padding-bottom: u.rem(66);
+        /* animation-duration: 3s;
+        animation-name: slidein; */
+        @include u.breakpoint(medium) {
+            padding-bottom: u.rem(30);
+            grid-template-columns: 1fr 1fr;
+            gap: u.rem(50);
+        }
     }
 }

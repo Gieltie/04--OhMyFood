@@ -5,6 +5,7 @@
     color: var(--black);
     position: relative;
     overflow: hidden;
+    width: 100%;
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
     transition: all 500ms ease-in-out;
     &:hover {
@@ -13,23 +14,23 @@
     }
     &__img {
         object-fit: cover;
-        width: u.rem(346); 
+        width: 102%; 
         height: u.rem(231);
         margin: u.rem(-57) u.rem(-3)u.rem(-4)u.rem(-3);
     } 
     &__nouveau {
-        font-size: u.rem(14);
-        background-color: var(--btn-green-light);
-        color: var(--btn-green-dark);
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
         width: u.rem(80);
         height: u.rem(29);
-        top: u.rem(13);
-        left: u.rem(251);
         border-radius: u.rem(2);
+        position: absolute;
+        top: u.rem(13);
+        right: u.rem(21);
+        background-color: var(--btn-green-light);
+        color: var(--btn-green-dark);
+        font-size: u.rem(14);
     } 
     &__title {
         font-size: u.rem(18);
@@ -39,21 +40,16 @@
     &__subtitle {
         font-size: u.rem(17);
         font-weight: 300;
-        height: u.rem(24);
         margin: 0 u.rem(80) u.rem(12) u.rem(13);
     }
     &__icon {
-        display: flex;
-        align-items: center;
         position: absolute;
-        width: u.rem(22);
-        height: u.rem(21);
         bottom: u.rem(33);
         right: u.rem(25);
     }
 }
 #clock-gradient {
-    opacity: 1.0;
+    opacity: 0.0;
     display: inline-block;
     -webkit-transition: opacity .4s ease;
     -moz-transition: opacity .4s ease;

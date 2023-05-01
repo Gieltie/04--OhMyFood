@@ -57,7 +57,6 @@ body {
   max-width: 62.5rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 3rem 0;
 }
 
 h1, h2, h3, h4, p, ul, li {
@@ -151,28 +150,48 @@ h4 {
 .fonctionnement {
   background-color: var(--white);
 }
+.fonctionnement__title {
+  padding-top: 3rem;
+}
+@media (min-width: 48em) {
+  .fonctionnement__title {
+    padding-top: 3.125rem;
+  }
+}
 .fonctionnement__wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5625rem;
-  padding: 1.625rem 0;
+  padding-top: 1.625rem;
+  padding-bottom: 4.25rem;
+}
+@media (min-width: 48em) {
+  .fonctionnement__wrap {
+    padding-top: 1.5625rem;
+    padding-bottom: 3.125rem;
+  }
 }
 
-.restaurants__wrap {
-  width: 23.4375rem;
-  margin-bottom: 4.125rem;
-}
 .restaurants__title {
-  margin: 3.375rem 5rem 1.75rem 1.25rem;
+  padding-top: 3.375rem;
 }
-.restaurants__wrapper {
-  display: flex;
-  flex-direction: column;
+.restaurants__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
   align-items: center;
   gap: 1.125rem;
-  animation-duration: 3s;
-  animation-name: slidein;
+  padding-top: 1.75rem;
+  padding-bottom: 4.125rem;
+  /* animation-duration: 3s;
+  animation-name: slidein; */
+}
+@media (min-width: 48em) {
+  .restaurants__wrap {
+    padding-bottom: 1.875rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.125rem;
+  }
 }
 
 .footer {
@@ -265,6 +284,7 @@ h4 {
   color: var(--black);
   position: relative;
   overflow: hidden;
+  width: 100%;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.9375rem;
   transition: all 500ms ease-in-out;
@@ -275,23 +295,23 @@ h4 {
 }
 .card__img {
   object-fit: cover;
-  width: 21.625rem;
+  width: 102%;
   height: 14.4375rem;
   margin: -3.5625rem -0.1875rem -0.25rem -0.1875rem;
 }
 .card__nouveau {
-  font-size: 0.875rem;
-  background-color: var(--btn-green-light);
-  color: var(--btn-green-dark);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 5rem;
   height: 1.8125rem;
-  top: 0.8125rem;
-  left: 15.6875rem;
   border-radius: 0.125rem;
+  position: absolute;
+  top: 0.8125rem;
+  right: 1.3125rem;
+  background-color: var(--btn-green-light);
+  color: var(--btn-green-dark);
+  font-size: 0.875rem;
 }
 .card__title {
   font-size: 1.125rem;
@@ -300,21 +320,16 @@ h4 {
 .card__subtitle {
   font-size: 1.0625rem;
   font-weight: 300;
-  height: 1.5rem;
   margin: 0 5rem 0.75rem 0.8125rem;
 }
 .card__icon {
-  display: flex;
-  align-items: center;
   position: absolute;
-  width: 1.375rem;
-  height: 1.3125rem;
   bottom: 2.0625rem;
   right: 1.5625rem;
 }
 
 #clock-gradient {
-  opacity: 1;
+  opacity: 0;
   display: inline-block;
   -webkit-transition: opacity 0.4s ease;
   -moz-transition: opacity 0.4s ease;
