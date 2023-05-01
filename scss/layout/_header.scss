@@ -25,7 +25,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15) inset;
+        font-weight: 400;
+        box-shadow: 0 u.rem(2) u.rem(4) 0 rgba(0, 0, 0, 0.15) inset;
         @include u.breakpoint(medium) {
             box-shadow: none;
         };

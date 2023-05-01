@@ -2,7 +2,7 @@
 
 .card {
     background-color: var(--background-color);
-    color: var(--black);
+    color: var(--black)!important;
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -10,7 +10,7 @@
     transition: all 500ms ease-in-out;
     &:hover {
         transform: translateY(-0.8rem);
-        box-shadow: 2px 3px 18px var(--btn-green-dark);
+        box-shadow: u.rem(2) u.rem(3) u.rem(18) var(--btn-green-dark);
     }
     &__img {
         object-fit: cover;

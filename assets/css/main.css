@@ -42,6 +42,15 @@ html {
   /* box-shadow: 0 0 0 1px red inset; */
 }
 
+a, a:visited, a:active {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul, li {
+  list-style: none;
+}
+
 body {
   background-color: var(--background-color);
   font-family: "Roboto", sans-serif;
@@ -54,7 +63,7 @@ body {
 
 .container {
   width: calc(100% - 2.5rem);
-  max-width: 62.5rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -62,14 +71,6 @@ body {
 h1, h2, h3, h4, p, ul, li {
   margin: 0;
   padding: 0;
-}
-
-a, a:visited, a:active {
-  text-decoration: none;
-}
-
-li {
-  font-weight: 400;
 }
 
 h4 {
@@ -107,6 +108,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* font-weight: 400; */
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15) inset;
 }
 @media (min-width: 48em) {
@@ -190,33 +192,54 @@ h4 {
   .restaurants__wrap {
     padding-bottom: 1.875rem;
     grid-template-columns: 1fr 1fr;
-    gap: 3.125rem;
+    column-gap: 6.25rem;
+    row-gap: 3.125rem;
   }
 }
 
 .footer {
   background-color: var(--background-grey-dark);
-  color: var(--white);
   display: flex;
   flex-direction: column;
-  padding: 1.375rem 1.5625rem;
   gap: 1rem;
+  padding: 1.375rem 1.5625rem;
+}
+@media (min-width: 48em) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 7.125rem;
+    padding-bottom: 0;
+  }
+}
+.footer__title {
+  color: var(--white);
+  font-size: 1.125rem;
+  height: 1.6875rem;
+  width: 8.5625rem;
+}
+@media (min-width: 48em) {
+  .footer__title {
+    width: 9.5625rem;
+  }
 }
 .footer__list {
   display: flex;
   flex-direction: column;
   gap: 0.4375rem;
 }
-.footer__list--item {
-  display: flex;
-  align-items: center;
-  list-style: none;
+@media (min-width: 48em) {
+  .footer__list {
+    flex-direction: row;
+  }
 }
-.footer__list a {
-  color: var(--white);
+.footer__list--grand {
+  height: 1.1875rem;
+  width: 190px;
 }
-.footer__list .strong {
-  font-weight: 500;
+.footer__list--petit {
+  height: 1.25rem;
+  width: 130px;
 }
 
 .reservez__btn {
@@ -244,7 +267,7 @@ h4 {
   align-items: center;
   position: relative;
   background-color: var(--background-color);
-  width: 19.375rem;
+  width: 20.125rem;
   height: 4.52375rem;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.15);
   border-radius: 1.25rem;
@@ -281,7 +304,7 @@ h4 {
 
 .card {
   background-color: var(--background-color);
-  color: var(--black);
+  color: var(--black) !important;
   position: relative;
   overflow: hidden;
   width: 100%;

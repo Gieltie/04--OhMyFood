@@ -16,7 +16,8 @@
         @include u.breakpoint(medium) {
             padding-bottom: u.rem(30);
             grid-template-columns: 1fr 1fr;
-            gap: u.rem(50);
+            column-gap: u.rem(100);
+            row-gap: u.rem(50);
         }
     }
 }
