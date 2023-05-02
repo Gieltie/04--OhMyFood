@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeout 0.2s 3s forwards;
+  animation: fadeout 0.2s 4s forwards;
 }
 
 @keyframes fadeout {
@@ -24,20 +24,23 @@
 }
 
 .loader__text {
-  font-size: u.rem(80);
+  font-size: u.rem(40);
   line-height: 64px;
-  letter-spacing: 5px;
-  margin-bottom: 32px;
+  letter-spacing: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  @include u.breakpoint(medium) {
+    font-size: u.rem(80);
+  }
   span {
     font-family: u.$font-shirkhand;
+    color: var(--btn-green-dark);
     animation: moveLetters 3s ease-in-out;
     transform: translatex(0);
     position: relative;
     display: inline-block;
     opacity: 0;
-    text-shadow: 0px 2px 10px rgba(46, 74, 81, 0.3); 
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9); 
   }
 }
 /* 

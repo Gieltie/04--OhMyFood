@@ -11,7 +11,7 @@
     &__wrap {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: u.rem(25);
         padding-top: u.rem(26);
         padding-bottom: u.rem(68);
