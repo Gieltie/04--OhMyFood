@@ -1,0 +1,84 @@
+ @use '../util/' as u;
+ 
+ .loader {
+  background: linear-gradient(120deg, var(--btn-green-light), var(--btn-green-dark)) ;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeout 0.2s 3s forwards;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+
+.loader__text {
+  font-size: u.rem(80);
+  line-height: 64px;
+  letter-spacing: 5px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  span {
+    font-family: u.$font-shirkhand;
+    animation: moveLetters 3s ease-in-out;
+    transform: translatex(0);
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    text-shadow: 0px 2px 10px rgba(46, 74, 81, 0.3); 
+  }
+}
+/* 
+@keyframes b-g-fader {
+  0% {
+    background-color: var(--btn-green-light);
+    opacity: 1;
+  }
+
+  90% {
+    background-color: var(--btn-green-light);
+    opacity: 0.8;
+  }
+
+  100% {
+    background-color: var(--btn-green-light);
+    opacity: 0;
+  }
+}
+
+
+*/
+@for $i from 1 through 8 {
+  .loader__text span:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@keyframes moveLetters {
+  0% {
+    transform: translateX(u.rem(-150));
+    opacity: 0;
+  }
+  
+  33.3%, 66% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateX(u.rem(150));
+    opacity: 0.8;
+  }
+}  
