@@ -3,7 +3,7 @@
 
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -17,6 +17,10 @@
         height: u.em(96);
         box-shadow: none
     };
+    &__link {
+        position: absolute;
+        left: 23px;
+    }
     &__logo {
         width: u.rem(162);
         height: u.rem(44);

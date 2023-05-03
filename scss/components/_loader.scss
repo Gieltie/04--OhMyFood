@@ -25,7 +25,7 @@
   }
 }
 
-.loader__text {
+.loader__text, .loader__palette {
   font-size: u.rem(40);
   line-height: 64px;
   letter-spacing: 10px;
@@ -48,6 +48,12 @@
 
 @for $i from 1 through 8 {
   .loader__text span:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@for $i from 1 through 15 {
+  .loader__palette span:nth-child(#{$i}) {
     animation-delay: $i * 0.1s;
   }
 }

@@ -1,1 +1,10 @@
 @use '../util/' as u;
+
+.banner1 {
+    position: relative;
+    top: 63px;
+    background-image: url("../images/restaurants/palette.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: u.rem(275);
+}
