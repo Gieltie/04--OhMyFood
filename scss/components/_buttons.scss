@@ -1,4 +1,5 @@
 @use '../util/' as u;
+/*----- Boutons -----*/
 
 .reservez__btn {
     display: inline-block;
@@ -7,7 +8,6 @@
     padding: u.rem(13) u.rem(18.75);
     line-height: u.rem(18.75);
     text-align: center;
-    border: none;
     @include u.shadow(u.rem(4), u.rem(10), 0.25, u.rem(25));
     transition: 300ms ease-out;
     &:hover {

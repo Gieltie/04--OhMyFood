@@ -1,5 +1,6 @@
  @use '../util/' as u;
- 
+ /*----- Loader -----*/
+
  .loader {
   background: linear-gradient(120deg, var(--btn-green-light), var(--btn-green-dark)) ;
   position: fixed;

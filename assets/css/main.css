@@ -1,3 +1,4 @@
+/*----- Reset -----*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,6 +49,7 @@ table {
   border-spacing: 0;
 }
 
+/*----- Couleurs -----*/
 :root {
   --black: #000000;
   --white: #FFFFFF;
@@ -82,6 +84,7 @@ table {
     opacity: 1;
   }
 }
+/*----- Typographie -----*/
 h1 {
   font-weight: 700;
   font-size: 1.5rem;
@@ -115,14 +118,7 @@ h4 {
   line-height: 1.245rem;
 }
 
-/* html {
-    box-sizing: border-box;
-    font-size: 100%;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
-} */
+/*----- Generale -----*/
 a, a:visited, a:active {
   text-decoration: none;
   color: var(--white);
@@ -146,6 +142,7 @@ body {
   margin-right: auto;
 }
 
+/*----- Header -----*/
 .header {
   display: flex;
   flex-direction: column;
@@ -191,6 +188,7 @@ body {
   }
 }
 
+/*----- Reservez -----*/
 .reservez {
   text-align: center;
 }
@@ -222,6 +220,7 @@ body {
   }
 }
 
+/*----- Fonctionnement -----*/
 .fonctionnement {
   background-color: var(--white);
 }
@@ -249,6 +248,7 @@ body {
   }
 }
 
+/*----- Restaurants -----*/
 .restaurants__title {
   padding-top: 3.375rem;
 }
@@ -271,6 +271,7 @@ body {
   }
 }
 
+/*----- Footer -----*/
 .footer {
   background-color: var(--background-grey-dark);
   display: flex;
@@ -316,6 +317,7 @@ body {
   width: 8.125rem;
 }
 
+/*----- Loader -----*/
 .loader {
   background: linear-gradient(120deg, var(--btn-green-light), var(--btn-green-dark));
   position: fixed;
@@ -408,6 +410,7 @@ body {
     opacity: 0.8;
   }
 }
+/*----- Boutons -----*/
 .reservez__btn {
   display: inline-block;
   background: linear-gradient(193.33deg, var(--btn-purple-dark) -11.44%, var(--btn-purple-light) 123.93%);
@@ -415,7 +418,6 @@ body {
   padding: 0.8125rem 1.171875rem;
   line-height: 1.171875rem;
   text-align: center;
-  border: none;
   box-shadow: 0 0.25rem 0.625rem 0 rgba(0, 0, 0, 0.25);
   border-radius: 1.5625rem;
   transition: 300ms ease-out;
@@ -474,6 +476,7 @@ body {
   color: var(--btn-purple-dark);
 }
 
+/*----- Cards -----*/
 .card {
   background-color: var(--background-color);
   color: var(--black) !important;
@@ -518,6 +521,13 @@ body {
   position: absolute;
   bottom: 2.0625rem;
   right: 1.5625rem;
+  background: url("/assets/images/logo/heart.svg");
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 22px;
+}
+.card__icon:hover {
+  background: url("/assets/images/logo/heart-like.svg");
 }
 
 #clock-gradient {
