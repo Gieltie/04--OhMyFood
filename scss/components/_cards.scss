@@ -44,12 +44,12 @@
         position: absolute;
         bottom: u.rem(33);
         right: u.rem(25);
-        background: url("assets/images/logo/heart.svg");
+        background: url("../images/logo/heart.svg");
         background-repeat: no-repeat;
         height: 21px;
         width: 22px;
         &:hover {
-            background: url("assets/images/logo/heart-like.svg");
+            background: url("../images/logo/heart-like.svg");
         }
     }
 }

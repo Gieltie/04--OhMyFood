@@ -521,13 +521,13 @@ body {
   position: absolute;
   bottom: 2.0625rem;
   right: 1.5625rem;
-  background: url("assets/images/logo/heart.svg");
+  background: url("../images/logo/heart.svg");
   background-repeat: no-repeat;
   height: 21px;
   width: 22px;
 }
 .card__icon:hover {
-  background: url("assets/images/logo/heart-like.svg");
+  background: url("../images/logo/heart-like.svg");
 }
 
 #clock-gradient {
