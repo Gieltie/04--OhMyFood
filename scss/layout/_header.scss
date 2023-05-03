@@ -7,7 +7,6 @@
     align-items: center;
     position: fixed;
     top: 0;
-
     z-index: 11;
     background-color: var(--white);
     width: 100%;
@@ -33,6 +32,7 @@
         height: u.rem(50);
         margin-top: u.rem(63);
         @include u.breakpoint(medium) {
+            line-height: u.rem(18.75);
             margin-top: u.rem(96);
         };
     }

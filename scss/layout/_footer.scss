@@ -14,7 +14,6 @@
     }
     &__title {
         color: var(--white);
-        font-size: u.rem(18);
         height: u.rem(27);
         width: u.rem(137);
         @include u.breakpoint(medium) {
@@ -33,6 +32,7 @@
             width: u.rem(190);
         }
         &--petit {
+            font-weight: 400;
             height: u.rem(20);
             width: u.rem(130);
         }

@@ -9,7 +9,7 @@
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
     transition: all 500ms ease-in-out;
     &:hover {
-        transform: translateY(-0.8rem);
+        transform: translateY(-0.6rem);
         box-shadow: u.rem(2) u.rem(3) u.rem(18) var(--btn-green-dark);
     }
     &__img {
@@ -33,13 +33,10 @@
         font-size: u.rem(14);
     } 
     &__title {
-        font-size: u.rem(18);
         margin: u.rem(16) u.rem(60) u.rem(5) u.rem(13);
 
     }
     &__subtitle {
-        font-size: u.rem(17);
-        font-weight: 300;
         margin: 0 u.rem(80) u.rem(12) u.rem(13);
     }
     &__icon {

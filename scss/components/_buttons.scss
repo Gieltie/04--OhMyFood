@@ -2,17 +2,19 @@
 
 .reservez__btn {
     display: inline-block;
-    background: linear-gradient(193.33deg, var(--btn-purple-light) -11.44%, var(--btn-purple-dark) 123.93%);
+    background: linear-gradient(193.33deg, var(--btn-purple-dark) -11.44%, var(--btn-purple-light) 123.93%);
     color: var(--white);
     padding: u.rem(13) u.rem(18.75);
     line-height: u.rem(18.75);
     text-align: center;
+    border: none;
     @include u.shadow(u.rem(4), u.rem(10), 0.25, u.rem(25));
+    transition: 300ms ease-out;
     &:hover {
-        transform: scale(1.15);
-        background: linear-gradient(193.33deg, var(--btn-purple-dark) -11.44%, var(--btn-purple-light) 123.93%);
-        @include u.shadow(u.rem(4), u.rem(10), 0.25, u.rem(25));
-        transform: matrix(1, 0, 0, -1, 0, 0);
+        /* transform: matrix(1, 0, 0, -1, 0, 0); */
+        transform: scale(1.10);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, var(--btn-purple-dark) -5.2%, var(--btn-purple-light) 110.74%);
+        @include u.shadow(u.rem(4), u.rem(15), 0.35, u.rem(25));
     }
 }
 
@@ -24,6 +26,11 @@
     width: u.rem(310);
     height: u.rem(72.38);
     @include u.shadow(u.rem(4), u.rem(15), 0.15, u.rem(20));
+    transition: all 500ms ease-in-out;
+    &:hover {
+        transform: translateY(-0.4rem);
+        box-shadow: u.rem(2) u.rem(3) u.rem(15) var(--btn-purple-dark);
+    }
     &__numberBox {
         background-color: var(--btn-purple-dark);
         position: absolute;

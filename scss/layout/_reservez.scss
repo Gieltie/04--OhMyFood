@@ -3,29 +3,24 @@
 .reservez {
     text-align: center;
     &__title {
-        font-size: u.rem(24);
-        font-weight: 700;
-        line-height: u.rem(28.13);
         margin: u.rem(39.5) u.rem(58) 0 u.rem(42);
         padding-bottom: u.rem(18);
         @include u.breakpoint(medium) {
-            margin: u.rem(30) u.rem(0) 0 u.rem(0);
             font-size: u.rem(40);
+            line-height: u.rem(46.88);
+            margin: u.rem(30) u.rem(0) 0 u.rem(0);
         }
     }
     &__subtitle {
-        font-weight: 300;
-        font-size: u.rem(18);
-        line-height: u.rem(21.09);
         margin-bottom: u.rem(27);
         @include u.breakpoint(medium) {
-            margin: 0 u.rem(0) u.rem(31) u.rem(0);
+            margin-bottom: u.rem(31);
         }
     }
     &__btn {
         margin-bottom: u.rem(57);
         @include u.breakpoint(medium) {
-            margin-bottom: u.rem(43);
+            margin-bottom: u.rem(30);
         }
     }
 }
