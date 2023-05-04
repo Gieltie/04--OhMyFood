@@ -1,23 +1,21 @@
-@keyframes slidein {
-    from {
-    margin-left:50%;
-    width:300%
+/*----- Icones coeurs -----*/
+@keyframes animationHeart {
+    0% {
+        transform: scale(0.2);
     }
-    to {
-    margin-left:0%;
-    width:100%;
+    40% {
+        transform: scale(1.2);
     }
-}
-
-@keyframes drop-in {
-    from {
-    transform:
-        rotate(-180deg) translateY(-100%);
-    opacity: 0;
+    100% {
+        transform: scale(1);
     }
-    to {
-    transform:
-        rotate(0deg) translateY(0%);
-    opacity: 1;
     }
-}
+    
+    @keyframes animationHeartApres {
+    0% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+    }

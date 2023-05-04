@@ -64,24 +64,24 @@ table {
 }
 
 /* breakpoints small:375px, medium:700px, large:900px, xlarge:1440px */
-@keyframes slidein {
-  from {
-    margin-left: 50%;
-    width: 300%;
+/*----- Icones coeurs -----*/
+@keyframes animationHeart {
+  0% {
+    transform: scale(0.2);
   }
-  to {
-    margin-left: 0%;
-    width: 100%;
+  40% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
-@keyframes drop-in {
-  from {
-    transform: rotate(-180deg) translateY(-100%);
-    opacity: 0;
+@keyframes animationHeartApres {
+  0% {
+    transform: scale(1.4);
   }
-  to {
-    transform: rotate(0deg) translateY(0%);
-    opacity: 1;
+  100% {
+    transform: scale(1);
   }
 }
 /*----- Typographie -----*/
@@ -563,6 +563,18 @@ body {
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.9375rem;
   transition: all 500ms ease-in-out;
+  /* &__icon {
+      position: absolute;
+      bottom: u.rem(33);
+      right: u.rem(25);
+      background: url("../images/icon/heart.svg");
+      background-repeat: no-repeat;
+      height: 21px;
+      width: 22px;
+      &:hover {
+          background: url("../images/icon/heart-like.svg");
+      }
+  } */
 }
 .card:hover {
   transform: translateY(-0.6rem);
@@ -595,29 +607,28 @@ body {
   margin: 0 5rem 0.75rem 0.8125rem;
 }
 .card__icon {
+  cursor: pointer;
+  overflow: visible;
+  width: 22px;
   position: absolute;
   bottom: 2.0625rem;
   right: 1.5625rem;
-  background: url("../images/icon/heart.svg");
-  background-repeat: no-repeat;
-  height: 21px;
-  width: 22px;
-}
-.card__icon:hover {
-  background: url("../images/icon/heart-like.svg");
 }
 
-#clock-gradient {
-  opacity: 0;
-  display: inline-block;
-  -webkit-transition: opacity 0.4s ease;
-  -moz-transition: opacity 0.4s ease;
-  -o-transition: opacity 0.4s ease;
-  transition: opacity 0.4s ease;
+svg .heart {
+  transform-origin: center;
+  animation: animationHeartApres 0.3s linear forwards;
 }
 
-#clock-gradient:hover {
-  opacity: 1;
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + label svg .heart {
+  transform: scale(0.9);
+  fill: url(#gradient);
+  animation: animationHeart 0.3s linear forwards 0.25s;
+  stroke: none;
 }
 
 .banner1 {

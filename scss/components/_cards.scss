@@ -41,6 +41,14 @@
         margin: 0 u.rem(80) u.rem(12) u.rem(13);
     }
     &__icon {
+        cursor: pointer;
+        overflow: visible;
+        width: 22px;
+        position: absolute;
+        bottom: u.rem(33);
+        right: u.rem(25);
+        }
+    /* &__icon {
         position: absolute;
         bottom: u.rem(33);
         right: u.rem(25);
@@ -51,17 +59,5 @@
         &:hover {
             background: url("../images/icon/heart-like.svg");
         }
-    }
-}
-
-#clock-gradient {
-    opacity: 0.0;
-    display: inline-block;
-    -webkit-transition: opacity .4s ease;
-    -moz-transition: opacity .4s ease;
-    -o-transition: opacity .4s ease;
-    transition: opacity .4s ease;
- }
- #clock-gradient:hover {
-    opacity: 1.0;
- }
+    } */
+} 
