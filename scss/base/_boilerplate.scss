@@ -1,7 +1,6 @@
 @use '../util' as u;
 
 /*----- Generale -----*/
-
 a, a:visited, a:active  {
     text-decoration: none;
     color: var(--white);
@@ -16,18 +15,34 @@ body  {
     font-family: u.$font-roboto;
     font-weight: 500;
     min-width: u.rem(375);
+    position: relative;
 }
 
 .container {
     width: calc(100% - u.rem(40));
-    max-width: u.rem(1024);
+    max-width: u.rem(1080);
     margin-left: auto;
     margin-right: auto;
 }
 
-.footer__container {
-    width: calc(100% - u.rem(50));
+.footer .container {
+    display: flex;
+    flex-direction: column;
     max-width: u.rem(1440);
+    gap: u.rem(16);
+    padding: u.rem(22) 0;
+    @include u.breakpoint(medium) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top: u.rem(64);
+        padding-bottom: u.rem(30);
+    }
+}
+
+.menu__main {
+    width: calc(100% - u.rem(50));
+    max-width: u.rem(1055);
     margin-left: auto;
     margin-right: auto;
 }

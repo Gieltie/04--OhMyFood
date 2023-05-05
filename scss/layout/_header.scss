@@ -1,6 +1,6 @@
 @use '../util/' as u;
-/*----- Header -----*/
 
+/*----- Header -----*/
 .header {
     display: flex;
     flex-direction: row;
@@ -15,11 +15,11 @@
     @include u.shadow(u.rem(2), u.rem(4), 0.15, u.rem(0));
     @include u.breakpoint(medium) {
         height: u.em(96);
-        box-shadow: none
-    };
+        box-shadow: none;
+    }
     &__link {
         position: absolute;
-        left: 23px;
+        left: u.rem(23);
     }
     &__logo {
         width: u.rem(162);

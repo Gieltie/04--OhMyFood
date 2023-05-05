@@ -1,6 +1,6 @@
 @use '../util/' as u;
-/*----- Fonctionnement -----*/
 
+/*----- Fonctionnement -----*/
 .fonctionnement {
     background-color: var(--white);
     &__title {
@@ -13,11 +13,12 @@
     &__wrap {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         gap: u.rem(25);
         padding-top: u.rem(26);
         padding-bottom: u.rem(68);
         @include u.breakpoint(medium) {
+            margin-left: u.rem(-8);
             padding-top: u.rem(25);
             padding-bottom: u.rem(50);
         }

@@ -1,5 +1,6 @@
 @use '../util/' as u;
   
+/*----- Le Coeur Selectable -----*/
   svg .heart {
     transform-origin: center;
     animation: animationHeartApres .3s linear forwards;

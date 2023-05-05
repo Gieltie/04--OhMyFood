@@ -1,6 +1,6 @@
 @use '../util/' as u;
-/*----- Cards -----*/
 
+/*----- Cards -----*/
 .card {
     background-color: var(--background-color);
     color: var(--black)!important;
@@ -10,7 +10,7 @@
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
     transition: all 500ms ease-in-out;
     &:hover {
-        transform: translateY(-0.6rem);
+        transform: translateY(-0.2rem);
         box-shadow: u.rem(2) u.rem(3) u.rem(18) var(--btn-green-dark);
     }
     &__img {
@@ -48,16 +48,15 @@
         bottom: u.rem(33);
         right: u.rem(25);
         }
-    /* &__icon {
+    &__icon {
         position: absolute;
         bottom: u.rem(33);
         right: u.rem(25);
         background: url("../images/icon/heart.svg");
-        background-repeat: no-repeat;
         height: 21px;
         width: 22px;
         &:hover {
             background: url("../images/icon/heart-like.svg");
         }
-    } */
+    }
 } 

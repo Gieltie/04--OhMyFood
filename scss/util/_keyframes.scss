@@ -1,3 +1,31 @@
+/*----- Le Loader -----*/
+@keyframes moveLetters {
+    0% {
+      transform: translateX(u.rem(-120));
+      opacity: 0;
+    }
+    
+    33.3%, 66% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translateX(u.rem(60));
+      opacity: 0.8;
+    }
+  }  
+
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
 /*----- Icones coeurs -----*/
 @keyframes animationHeart {
     0% {

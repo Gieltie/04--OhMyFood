@@ -1,21 +1,8 @@
 @use '../util/' as u;
-/*----- Footer -----*/
 
+/*----- Footer -----*/
 .footer {
     background-color: var(--background-grey-dark);
-    &__container {
-        display: flex;
-        flex-direction: column;
-        gap: u.rem(16);
-        padding: u.rem(22) 0;
-        @include u.breakpoint(medium) {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            padding-top: u.rem(64);
-            padding-bottom: u.rem(30);
-        }
-    } 
     &__title {
         color: var(--white);
         height: u.rem(27);
@@ -42,4 +29,5 @@
             height: u.rem(20);
         }
     }
-}
+} 
+

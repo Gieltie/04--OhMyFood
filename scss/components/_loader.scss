@@ -1,7 +1,7 @@
  @use '../util/' as u;
- /*----- Loader -----*/
-
- .loader {
+ 
+ /*----- Le Loader -----*/
+ .loader, .loader-gout {
   background: linear-gradient(120deg, var(--btn-green-light), var(--btn-green-dark)) ;
   position: fixed;
   height: 100%;
@@ -11,18 +11,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeout 0.2s 4s forwards;
+  animation: fadeout 0.2s 3s forwards;
   opacity: 0.95;
 }
 
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+.loader-gout {
+  animation: fadeout 0.2s 4s forwards;
 }
 
 .loader__text, .loader__palette {
@@ -37,7 +31,7 @@
   span {
     font-family: u.$font-shirkhand;
     color: var(--btn-green-dark);
-    animation: moveLetters 3s ease-in-out;
+    animation: moveLetters 2s ease-in-out;
     transform: translatex(0);
     position: relative;
     display: inline-block;
@@ -57,20 +51,3 @@
     animation-delay: $i * 0.1s;
   }
 }
-
-@keyframes moveLetters {
-  0% {
-    transform: translateX(u.rem(-150));
-    opacity: 0;
-  }
-  
-  33.3%, 66% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  
-  100% {
-    transform: translateX(u.rem(150));
-    opacity: 0.8;
-  }
-}  
