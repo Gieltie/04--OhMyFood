@@ -1,8 +1,9 @@
 @use '../util/' as u;
 
 /*----- Les Pages Menu -----*/
-.mission {
+.menu {
     display: flex;
+    flex-direction: column;
     background-image: url(../images/restaurants/palette.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -10,7 +11,7 @@
     max-width: u.rem(1440);
   }
   
-  .text_over {
+  .menu__main {
     margin: auto;
     background-color: var(--background-color);
     width: 90%;
@@ -18,15 +19,5 @@
   }
 
   .text_over h2 {
-    height: 100px;
+    height: 10px;
   }
-
-/* .mission {
-    background-image: url("../images/restaurants/palette.jpg");
-    display: flex;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 700px;
-    max-width: 1200px;
-    margin: 40px auto 40px auto;
-} */

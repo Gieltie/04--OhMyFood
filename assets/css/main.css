@@ -63,7 +63,30 @@ table {
   --btn-green-dark: #008766;
 }
 
-/* breakpoints small:375px, medium:700px, large:900px, xlarge:1440px */
+/* breakpoints small:375px, medium:700px, large:900px, xlarge:1440px */ /*----- Le Loader -----*/
+@keyframes moveLetters {
+  0% {
+    transform: translateX(-7.5rem);
+    opacity: 0;
+  }
+  33.3%, 66% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(3.75rem);
+    opacity: 0.8;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 /*----- Icones coeurs -----*/
 @keyframes animationHeart {
   0% {
@@ -162,13 +185,12 @@ body {
   }
 }
 
-.menu__main {
-  width: calc(100% - 3.125rem);
-  max-width: 65.9375rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* .menu__main {
+    width: calc(100% - u.rem(50));
+    max-width: u.rem(1055);
+    margin-left: auto;
+    margin-right: auto;
+} */
 /*----- Header -----*/
 .header {
   display: flex;
@@ -338,7 +360,7 @@ body {
   height: 1.25rem;
 }
 
-/*----- Loader -----*/
+/*----- Le Loader -----*/
 .loader, .loader-gout {
   background: linear-gradient(120deg, var(--btn-green-light), var(--btn-green-dark));
   position: fixed;
@@ -357,15 +379,6 @@ body {
   animation: fadeout 0.2s 4s forwards;
 }
 
-@keyframes fadeout {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 .loader__text, .loader__palette {
   font-size: 2.5rem;
   line-height: 64px;
@@ -481,20 +494,6 @@ body {
   animation-delay: 1.5s;
 }
 
-@keyframes moveLetters {
-  0% {
-    transform: translateX(-7.5rem);
-    opacity: 0;
-  }
-  33.3%, 66% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(3.75rem);
-    opacity: 0.8;
-  }
-}
 /*----- Boutons -----*/
 .reservez__btn {
   display: inline-block;
@@ -571,6 +570,17 @@ body {
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.9375rem;
   transition: all 500ms ease-in-out;
+  /*     &__icon {
+          position: absolute;
+          bottom: u.rem(33);
+          right: u.rem(25);
+          background: url("../images/icon/heart.svg");
+          height: 21px;
+          width: 22px;
+          &:hover {
+              background: url("../images/icon/heart-like.svg");
+          }
+      } */
 }
 .card:hover {
   transform: translateY(-0.2rem);
@@ -610,18 +620,8 @@ body {
   bottom: 2.0625rem;
   right: 1.5625rem;
 }
-.card__icon {
-  position: absolute;
-  bottom: 2.0625rem;
-  right: 1.5625rem;
-  background: url("../images/icon/heart.svg");
-  height: 21px;
-  width: 22px;
-}
-.card__icon:hover {
-  background: url("../images/icon/heart-like.svg");
-}
 
+/*----- Le Coeur Selectable -----*/
 svg .heart {
   transform-origin: center;
   animation: animationHeartApres 0.3s linear forwards;
@@ -638,8 +638,10 @@ svg .heart {
   stroke: none;
 }
 
-.mission {
+/*----- Les Pages Menu -----*/
+.menu {
   display: flex;
+  flex-direction: column;
   background-image: url(../images/restaurants/palette.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -647,7 +649,7 @@ svg .heart {
   max-width: 90rem;
 }
 
-.text_over {
+.menu__main {
   margin: auto;
   background-color: var(--background-color);
   width: 90%;
@@ -655,15 +657,5 @@ svg .heart {
 }
 
 .text_over h2 {
-  height: 100px;
+  height: 10px;
 }
-
-/* .mission {
-    background-image: url("../images/restaurants/palette.jpg");
-    display: flex;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 700px;
-    max-width: 1200px;
-    margin: 40px auto 40px auto;
-} */
