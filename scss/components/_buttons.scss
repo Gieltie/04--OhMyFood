@@ -1,7 +1,7 @@
 @use '../util/' as u;
 
 /*----- Boutons -----*/
-.reservez__btn {
+.reservez__btn, .btn__commander {
     display: inline-block;
     background: linear-gradient(193.33deg, var(--btn-purple-dark) -11.44%, var(--btn-purple-light) 123.93%);
     color: var(--white);
@@ -60,5 +60,51 @@
     }
     & .fa-store {
         color: var(--btn-purple-dark);
+    }
+}
+
+.menuBtn {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: u.rem(349);
+    height: u.rem(69);
+    isolation: isolate;
+    @include u.shadow(u.rem(4), u.rem(15), 0.15, u.rem(20));
+    transition: all 500ms ease-in-out;
+    &:hover {
+        transform: translateY(-0.2rem);
+        box-shadow: u.rem(2) u.rem(3) u.rem(15) var(--btn-purple-dark);
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: u.rem(5);
+        &--title {
+            font-family: u.$font-roboto;
+            line-height: u.rem(21.09);
+            margin-left: u.rem(15);
+        }
+        &--text {
+            line-height: u.rem(18.75);
+            margin-left: u.rem(15);
+            margin-right: u.rem(38);
+            font-weight: 300;
+            & span {
+                width: 18px;
+                height: 18px;
+                font-weight: 700;
+                font-size: 15.0431px;
+                line-height: 18px;
+                display: flex;
+                align-items: flex-end;
+                text-align: center;
+                color: #353535;
+            }
+        }
     }
 }

@@ -1,23 +1,94 @@
 @use '../util/' as u;
 
 /*----- Les Pages Menu -----*/
-.menu {
+html {
+    background-color: white;
+}
+
+.menuWrapper {
     display: flex;
     flex-direction: column;
-    background-image: url(../images/restaurants/palette.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: u.rem(375);
-    max-width: u.rem(1440);
-  }
-  
-  .menu__main {
-    margin: auto;
-    background-color: var(--background-color);
-    width: 90%;
-    border-radius: 25px 25px 0 0;
-  }
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    position: absolute;
+    width: 375px;
+    height: 1275px;
+    left: calc(50% - 375px/2);
+    top: 315px;
+    z-index: 10;
+    @include u.breakpoint(medium) {
+        width: 1440px;
+        height: 1215px;
+        left: 0px;
+        top: u.rem(490)
+    }
+    &__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        &--titre {
+            font-family: u.$font-shirkhand;
+            font-size: u.rem(28);
+            line-height: u.rem(40.82);
+            width: 341px;
+            height: u.rem(27);
+        }
+        &--icon {
+            cursor: pointer;
+            overflow: visible;
+            width: 22px;
+            position: absolute;
+            top: u.rem(8);
+            left: u.rem(312);
+            z-index: 10;
+        }
+    }
+    &__box {
+        width: u.rem(349);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: u.rem(12);
+    }
+}
 
-  .text_over h2 {
-    height: 10px;
-  }
+.background {
+    background-color: var(--background-color);
+    border-radius: 25px 25px 0 0;
+    position: absolute;
+    width: 375px;
+    height: 1307px;
+    left: calc(50% - 375px/2);
+    
+    top: 283px;
+    z-index: 8;
+    @include u.breakpoint(medium) {
+        top: u.rem(439);
+        width: u.rem(1055);
+        height: u.rem(1221);
+        left: 193px;
+    }
+}
+
+.image {
+    background-color: var(--white);
+    background: center / 110% url('../images/restaurants/palette.jpg');
+    position: absolute;
+    width: 100%;
+    height: 275px;
+    top: 63px;
+    z-index: 0;
+    @include u.breakpoint(medium) {
+        background: center / 100% url('../images/restaurants/palette.jpg');
+        height: 956px;
+        width: 1440px;
+        top: -234px;
+        left: 0;
+    } 
+}
+
+.footer {
+    width: 100%;
+}

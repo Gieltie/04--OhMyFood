@@ -13,7 +13,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="menu">
+<body>
 
         <!--***** Le Loader *****-->
 
@@ -43,48 +43,118 @@
         <a class="header__link" href="../index.html"><img src="../assets/images/icon/arrow-left.svg" alt=""></span></a>
         <img class="header__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo oh my food">
     </header>
-    <main id="mission">
+    
+    <main class="menuWrapper">
 
-        <!--***** La Photo *****-->
-        <div class="menu">
-            <div class="menu__main">
-            <h2>La palette du goût</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia molestiae provident nisi repellat pariatur porro facilis aperiam voluptate, at aut perferendis quae ducimus aliquid necessitatibus, quidem blanditiis unde magni?</p>
-            <input class="checkbox" id="checkbox3" type="checkbox" />
-            <label for="checkbox3">
-                <svg class="card__icon" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+        <div class="menuWrapper__title">
+            <h2 class="menuWrapper__title--titre">La palette du goût
+            <input class="checkbox" id="checkbox" type="checkbox">
+            <label for="checkbox">
+                <svg class="menuWrapper__title--icon" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
                 <path class="heart" d="M12.2206 2.40576L12.2208 2.40551C14.2226 0.15233 17.4035 -0.169451 19.5243 1.80187C22.0186 4.1243 22.156 8.32326 19.9123 10.8492L19.9122 10.8493L11.5978 20.2148C11.2596 20.5956 10.7372 20.5956 10.399 20.2148L2.0848 10.8495C-0.15494 8.32357 -0.0175439 4.1245 2.47664 1.80201C4.59762 -0.169649 7.78271 0.152585 9.77992 2.40514L9.78047 2.40576L10.627 3.35732L11.0005 3.77727L11.3741 3.35732L12.2206 2.40576Z" fill="none" stroke="#101010"/>
                 <linearGradient id="gradient" x2="0" y2="1">
                     <stop offset="0%" stop-color="var(--btn-purple-dark)" />
                     <stop offset="100%" stop-color="var(--btn-purple-light)" />
                 </linearGradient>
                 </svg>
-            </label>
+            </label></h2>
+        </div>
+
+        <div class="menuWrapper__box">
+            <h3>Entrées</h3>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Fricassée d'escargots</h4>
+                    <p class="menuBtn__box--text">Au piment d'Espelette</p>
+                </div>
+                <span>25€</span>
+            </div>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Foie gras de canard mi-cuit</h4>
+                    <p class="menuBtn__box--text">Et ses copeaux de truffe noire</p>
+                </div>
+                <span>35€</span>
+            </div>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Œuf au plat</h4>
+                    <p class="menuBtn__box--text">Assaisonné à la truffe sur lit de caviar</p>
+                </div>
+                <span>20€</span>
             </div>
         </div>
-    </main>
-    
-       
-    <!--***** Le Footer *****-->
-
-    <footer class="footer">
-        <div class="container">
-            <h4 class="footer__title">ohmyfood</h4>
-            <ul class="footer__list">
-                <li class="footer__list--grand">
-                    <a href=""><img src="../assets/images/icon/fork-knife.svg" alt="logo de fouchette et couteau">&nbsp; Proposer un restaurant</a>
-                </li>
-                <li class="footer__list--grand">
-                    <a href=""><img src="../assets/images/icon/handshake.svg" alt="logo de poignee de main">&nbsp; Devenir partenaire</a>
-                </li>
-                <li class="footer__list--petit">
-                    <a href="">Mentions légales</a>
-                </li>
-                <li class="footer__list--petit">
-                    <a href="mailto:contact@ohmyfood.fr">Contact</a>
-                </li>
-            </ul>
+        <div class="menuWrapper__box">
+            <h3>Plats</h3>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Filet de bœuf aux herbes</h4>
+                    <p class="menuBtn__box--text">Accompagné de sa ribambelle de légumes</p>
+                </div>
+                <span>40€</span>
+            </div>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Parmentier de queue de bœuf</h4>
+                    <p class="menuBtn__box--text">À la truffe noire sur sa purée de panais</p>
+                </div>
+                <span>35€</span>
+            </div>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Filet de turbot</h4>
+                    <p class="menuBtn__box--text">Aux agrumes</p>
+                </div>
+                <span>44€</span>
+            </div>
         </div>
-    </footer>
+        <div class="menuWrapper__box">
+            <h3>Desserts</h3>
+            <div class="menuBtn">
+                <div class="menuBtn__box">
+                    <h4 class="menuBtn__box--title">Paris-Brest</h4>
+                    <p class="menuBtn__box--text">Revisité</p>
+                </div>
+                <span>18€</span>
+            </div class="menuBtn__box">
+            <div class="menuBtn">
+                <div>
+                    <h4 class="menuBtn__box--title">Macaron au chocolat d'exception</h4>
+                    <p class="menuBtn__box--text">Et glace à la vanille de Madagascar</p>
+                </div>
+                <span>22€</span>
+            </div class="menuBtn__box">
+            <div class="menuBtn">
+                <div>
+                    <h4 class="menuBtn__box--title">Mousse au chocolat</h4>
+                    <p class="menuBtn__box--text">Au piment d'Espelette et à la truffe noire</p>
+                </div>
+                <span>23€</span>
+            </div>
+        </div>
+        <a class="btn__commander" href="#restaurants">Commander</a>
+        <footer class="footer">
+            <div class="container">
+                <h4 class="footer__title">ohmyfood</h4>
+                <ul class="footer__list">
+                    <li class="footer__list--grand">
+                        <a href=""><img src="../assets/images/icon/fork-knife.svg" alt="logo de fouchette et couteau">&nbsp; Proposer un restaurant</a>
+                    </li>
+                    <li class="footer__list--grand">
+                        <a href=""><img src="../assets/images/icon/handshake.svg" alt="logo de poignee de main">&nbsp; Devenir partenaire</a>
+                    </li>
+                    <li class="footer__list--petit">
+                        <a href="">Mentions légales</a>
+                    </li>
+                    <li class="footer__list--petit">
+                        <a href="mailto:contact@ohmyfood.fr">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>  
+
+    <div class="background"></div>
+    <div class="image"></div>
 </body>
 </html>
