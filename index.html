@@ -17,7 +17,7 @@
 
     <!--***** Le Loader *****-->
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader__text">
         <span>O</span>
         <span>h</span>
@@ -28,15 +28,18 @@
         <span>o</span>
         <span>d</span>
         </div>
-    </div>
+    </div> -->
 
     <!--***** Le Header *****-->
 
-    <header class="header">
-        <a class="header__link" href="../index.html" hidden><img src="../assets/images/icon/arrow-left.svg" alt=""></a>
-        <img class="header__logo" src="./assets/images/logo/ohmyfood@2x.svg" alt="logo oh my food">
+    <header class="l-header">
+        <div class="nav grid">
+            <a class="nav__link" href="../index.html"><img src="../assets/images/icon/arrow-left.svg" alt=""></a>
+            <img class="nav__logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo oh my food">
+        </div>
     </header>
-    <aside class="header__location">
+
+    <aside class="nav__location">
         <p><i class="fa-solid fa-location-dot fa-fw" aria-hidden="true"></i>&nbsp; Paris, Belleville</p>
     </aside>
 
@@ -46,13 +49,12 @@
         <h1 class="reservez__title">Réservez le menu qui vous convient</h1>
         <p class="reservez__subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
         <a class="reservez__btn" href="#restaurants">Explorer nos restaurants</a>
-        
     </section>
 
     <!--***** La Section Fonctionnement *****-->
 
     <section class="fonctionnement">
-        <div class="container">
+        <div class="grid">
             <h2 class="fonctionnement__title">Fonctionnement</h2>
             <div class="fonctionnement__wrap">
                 <div class="fonctionnement__btn">
@@ -83,7 +85,7 @@
     <!--***** La Section Restaurants *****-->
 
     <section class="restaurants" id="restaurants">
-        <div class="container">
+        <div class="grid">
             <h2 class="restaurants__title">Restaurants</h2>
             <div class="restaurants__wrap">
                 <article class="card">
@@ -147,7 +149,7 @@
     <!--***** Le Footer *****-->
 
     <footer class="footer">
-        <div class="container">
+        <div class="grid">
             <h4 class="footer__title">ohmyfood</h4>
             <ul class="footer__list">
                 <li class="footer__list--grand">

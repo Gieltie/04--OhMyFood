@@ -160,22 +160,25 @@ body {
   min-width: 23.4375rem;
 }
 
-.container {
+.grid {
+  display: grid;
   width: calc(100% - 2.5rem);
-  max-width: 67.5rem;
+  max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-.footer .container {
-  display: flex;
-  flex-direction: column;
+.l-header .grid {
+  max-width: 1440px;
+}
+
+.footer .grid {
   max-width: 90rem;
   gap: 1rem;
   padding: 1.375rem 0;
 }
 @media (min-width: 48em) {
-  .footer .container {
+  .footer .grid {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -185,40 +188,51 @@ body {
 }
 
 /*----- Header -----*/
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+.l-header {
+  width: 100%;
   position: fixed;
   top: 0;
-  z-index: 11;
+  left: 0;
+  z-index: 100;
   background-color: var(--white);
-  width: 100%;
   height: 3.9375rem;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.15);
   border-radius: 0rem;
 }
 @media (min-width: 48em) {
-  .header {
+  .l-header {
     height: 6em;
     box-shadow: none;
   }
 }
-.header__link {
-  position: absolute;
-  left: 1.4375rem;
+
+.nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 14px;
 }
-.header__logo {
+@media (min-width: 48em) {
+  .nav {
+    padding-top: 1.875rem;
+  }
+}
+.nav__link {
+  position: absolute;
+  left: 0.375rem;
+}
+.nav__logo {
   width: 10.125rem;
   height: 2.75rem;
 }
 @media (min-width: 48em) {
-  .header__logo {
+  .nav__logo {
     width: 12.5rem;
   }
 }
-.header__location {
+.nav__location {
   background-color: var(--background-grey-light);
   display: flex;
   justify-content: center;
@@ -228,7 +242,7 @@ body {
   margin-top: 3.9375rem;
 }
 @media (min-width: 48em) {
-  .header__location {
+  .nav__location {
     line-height: 1.171875rem;
     margin-top: 6rem;
   }
@@ -688,19 +702,20 @@ html {
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  gap: 40px;
+  justify-content: space-between;
   position: absolute;
-  width: 375px;
+  width: 100%;
   height: 1275px;
-  left: calc(50% - 187.5px);
   top: 315px;
   z-index: 10;
+  /*  @include u.breakpoint(large) {
+       height: 1215px;
+       top: u.rem(490)
+   } */
 }
 @media (min-width: 48em) {
   .menuWrapper {
-    width: 1440px;
     height: 1215px;
-    left: 0px;
     top: 30.625rem;
   }
 }
@@ -708,7 +723,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: relative;
 }
 .menuWrapper__title--titre {
   font-family: "Shrikhand", cursive;
@@ -739,7 +753,7 @@ html {
   border-radius: 25px 25px 0 0;
   position: absolute;
   width: 375px;
-  height: 1307px;
+  height: 1300px;
   left: calc(50% - 187.5px);
   top: 283px;
   z-index: 8;
@@ -747,15 +761,24 @@ html {
 @media (min-width: 48em) {
   .background {
     top: 27.4375rem;
-    width: 65.9375rem;
-    height: 76.3125rem;
-    left: 193px;
+    left: calc(50% - 334px);
+    width: 41.75rem;
+    height: 78.125rem;
+  }
+}
+@media (min-width: 64em) {
+  .background {
+    left: calc(50% - 512px);
+    width: 64rem;
+    height: 78.125rem;
   }
 }
 
 .image {
   background-color: var(--white);
-  background: center/110% url("../images/restaurants/palette.jpg");
+  background: center/100% url("../images/restaurants/palette.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
   width: 100%;
   height: 275px;
@@ -764,11 +787,7 @@ html {
 }
 @media (min-width: 48em) {
   .image {
-    background: center/100% url("../images/restaurants/palette.jpg");
-    height: 956px;
-    width: 1440px;
-    top: -234px;
-    left: 0;
+    height: 400px;
   }
 }
 

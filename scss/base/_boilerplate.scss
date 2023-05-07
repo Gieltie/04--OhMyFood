@@ -17,16 +17,19 @@ body  {
     min-width: u.rem(375);
 }
 
-.container {
+.grid {
+    display: grid;
     width: calc(100% - u.rem(40));
-    max-width: u.rem(1080);
+    max-width: u.rem(1024);
     margin-left: auto;
     margin-right: auto;
 }
 
-.footer .container {
-    display: flex;
-    flex-direction: column;
+.l-header .grid {
+    max-width: 1440px;
+}
+
+.footer .grid {
     max-width: u.rem(1440);
     gap: u.rem(16);
     padding: u.rem(22) 0;
