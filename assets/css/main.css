@@ -723,6 +723,7 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: relative;
 }
 .menuWrapper__title--titre {
   font-family: "Shrikhand", cursive;
@@ -768,9 +769,10 @@ html {
 }
 @media (min-width: 64em) {
   .background {
+    top: 440px;
     left: calc(50% - 512px);
     width: 64rem;
-    height: 78.125rem;
+    height: 76.5625rem;
   }
 }
 
@@ -787,7 +789,14 @@ html {
 }
 @media (min-width: 48em) {
   .image {
-    height: 400px;
+    height: 383px;
+    top: 96px;
+  }
+}
+@media (min-width: 64em) {
+  .image {
+    height: 26.25rem;
+    top: 40px;
   }
 }
 

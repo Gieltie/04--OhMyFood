@@ -28,6 +28,7 @@ html {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        position: relative;
         &--titre {
             font-family: u.$font-shirkhand;
             font-size: u.rem(28);
@@ -70,9 +71,10 @@ html {
         height: u.rem(1250);
     }
     @include u.breakpoint(large) {
+        top: 440px;
         left: calc(50% - 1024px/2);
         width: u.rem(1024);
-        height: u.rem(1250);
+        height: u.rem(1225);
     }
 }
 
@@ -87,7 +89,12 @@ html {
     top: 63px;
     z-index: 0;
     @include u.breakpoint(medium) {
-        height: 400px;
+        height: 383px;
+        top: 96px;
+    }
+    @include u.breakpoint(large) {
+        height: u.rem(420);
+        top: 40px;
     }
 }
 
