@@ -17,13 +17,8 @@ html {
     top: 315px;
     z-index: 10;
     @include u.breakpoint(medium) {
-        height: 1215px;
         top: u.rem(490)
     }
-   /*  @include u.breakpoint(large) {
-        height: 1215px;
-        top: u.rem(490)
-    } */
     &__title {
         display: flex;
         flex-direction: row;
@@ -42,7 +37,7 @@ html {
             width: 22px;
             position: absolute;
             top: u.rem(8);
-            left: u.rem(312);
+            right: u.rem(24);
             z-index: 10;
         }
     }
@@ -52,8 +47,21 @@ html {
         flex-direction: column;
         align-items: flex-start;
         gap: u.rem(12);
+        &--title {
+            height: 27px;
+            text-transform: uppercase;
+            font-size: 300;
+            line-height: u.rem(18.75);
+            width: 275px;
+        }
+        &--borderLeft {
+            border-bottom: 3px solid var(--btn-green-light);
+            width: 40px;
+            margin-top: 6px;
+          }
     }
 }
+
 
 .background {
     background-color: var(--background-color);

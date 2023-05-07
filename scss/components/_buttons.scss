@@ -72,6 +72,7 @@
     width: u.rem(349);
     height: u.rem(69);
     isolation: isolate;
+    position: relative;
     @include u.shadow(u.rem(4), u.rem(15), 0.15, u.rem(20));
     transition: all 500ms ease-in-out;
     &:hover {

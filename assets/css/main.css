@@ -576,6 +576,7 @@ body {
   width: 21.8125rem;
   height: 4.3125rem;
   isolation: isolate;
+  position: relative;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.15);
   border-radius: 1.25rem;
   transition: all 500ms ease-in-out;
@@ -708,14 +709,9 @@ html {
   height: 1275px;
   top: 315px;
   z-index: 10;
-  /*  @include u.breakpoint(large) {
-       height: 1215px;
-       top: u.rem(490)
-   } */
 }
 @media (min-width: 48em) {
   .menuWrapper {
-    height: 1215px;
     top: 30.625rem;
   }
 }
@@ -738,7 +734,7 @@ html {
   width: 22px;
   position: absolute;
   top: 0.5rem;
-  left: 19.5rem;
+  right: 1.5rem;
   z-index: 10;
 }
 .menuWrapper__box {
@@ -747,6 +743,18 @@ html {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
+}
+.menuWrapper__box--title {
+  height: 27px;
+  text-transform: uppercase;
+  font-size: 300;
+  line-height: 1.171875rem;
+  width: 275px;
+}
+.menuWrapper__box--borderLeft {
+  border-bottom: 3px solid var(--btn-green-light);
+  width: 40px;
+  margin-top: 6px;
 }
 
 .background {
