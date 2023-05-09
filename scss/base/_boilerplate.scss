@@ -1,6 +1,10 @@
 @use '../util' as u;
 
 /*----- Generale -----*/
+* {
+    box-sizing: border-box;
+}
+
 a, a:visited, a:active  {
     text-decoration: none;
     color: var(--white);

@@ -107,6 +107,34 @@ table {
     transform: scale(1);
   }
 }
+@keyframes check-rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes showCardEven {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes showCardUneven {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
 /*----- Typographie -----*/
 h1 {
   font-weight: 700;
@@ -144,6 +172,10 @@ h4 {
 }
 
 /*----- Generale -----*/
+* {
+  box-sizing: border-box;
+}
+
 a, a:visited, a:active {
   text-decoration: none;
   color: var(--white);
@@ -567,52 +599,86 @@ body {
   color: var(--btn-purple-dark);
 }
 
-.menuBtn {
-  background-color: var(--white);
+.menuCard {
   display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: space-between;
   width: 21.8125rem;
   height: 4.3125rem;
-  isolation: isolate;
   position: relative;
-  box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.15);
-  border-radius: 1.25rem;
-  transition: all 500ms ease-in-out;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.9375rem;
+  transition: box-shadow 0.3s;
 }
-.menuBtn:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0.125rem 0.1875rem 0.9375rem var(--btn-purple-dark);
+.menuCard:hover {
+  box-shadow: 0 0rem 1.875rem 0 rgba(0, 0, 0, 0.3);
+  border-radius: 0.9375rem;
 }
-.menuBtn__box {
+.menuCard__box {
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+  gap: 0.3125rem;
+}
+.menuCard__box--text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.3125rem;
+  height: 42px;
+  gap: 5px;
 }
-.menuBtn__box--title {
+.menuCard__box--text h4 {
   font-family: "Roboto", sans-serif;
   line-height: 1.318125rem;
-  margin-left: 0.9375rem;
 }
-.menuBtn__box--text {
-  line-height: 1.171875rem;
-  margin-left: 0.9375rem;
-  margin-right: 2.375rem;
+.menuCard__box--text p {
+  line-height: 1.101875rem;
   font-weight: 300;
+  font-size: 15px;
 }
-.menuBtn__box--text span {
-  width: 18px;
-  height: 18px;
-  font-weight: 700;
-  font-size: 15.0431px;
-  line-height: 18px;
+.menuCard__box--price {
   display: flex;
-  align-items: flex-end;
-  text-align: center;
-  color: #353535;
+  align-items: flex-start;
+  font-size: 15px;
+  position: absolute;
+  right: 16px;
+  transition: margin-right 450ms ease-in-out;
+}
+.menuCard__selectBtn {
+  background-color: #99E2D0;
+  border-radius: 0 16px 16px 0;
+  position: absolute;
+  width: 59px;
+  height: 69px;
+  right: -60px;
+  top: 0px;
+  transition: margin-right 450ms ease-in-out;
+}
+.menuCard__selectBtn--check {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  transform: rotate(0);
+  transition: transform 1s ease-in-out;
+}
+.menuCard:hover .menuCard__box--price {
+  margin-right: 60px;
+}
+.menuCard:hover .menuCard__selectBtn {
+  margin-right: 60px;
+}
+.menuCard:hover .menuCard__selectBtn--check {
+  animation: check-rotate 0.3s linear 0.1s;
+}
+
+.even {
+  animation: showCardEven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
+}
+
+.uneven {
+  animation: showCardUneven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
 }
 
 /*----- Cards -----*/
@@ -747,7 +813,7 @@ html {
 .menuWrapper__box--title {
   height: 27px;
   text-transform: uppercase;
-  font-size: 300;
+  font-weight: 300;
   line-height: 1.171875rem;
   width: 275px;
 }

@@ -18,7 +18,7 @@
     }
   }  
 
-  @keyframes fadeout {
+@keyframes fadeout {
     from {
       opacity: 1;
     }
@@ -49,3 +49,35 @@
         transform: scale(1);
     }
     }
+
+
+@keyframes check-rotate {	
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes showCardEven {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes showCardUneven {
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
