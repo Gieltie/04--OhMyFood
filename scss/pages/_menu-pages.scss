@@ -1,9 +1,6 @@
 @use '../util/' as u;
 
 /*----- Les Pages Menu -----*/
-html {
-    background-color: white;
-}
 
 .menuWrapper {
     display: flex;
@@ -12,26 +9,25 @@ html {
     justify-content: space-between;
     position: absolute;
     width: 100%;
-    height: 1275px;
-    top: 315px;
+    height: u.rem(1275);
+    top: u.rem(315);
     z-index: 10;
     @include u.breakpoint(medium) {
         top: u.rem(490)
     }
     &__title {
         position: relative;
-        top: 0;
         &--titre {
             font-family: u.$font-shirkhand;
             font-size: u.rem(28);
             line-height: u.rem(40.82);
-            width: 341px;
+            width: u.rem(341);
             height: u.rem(27);
         }
         &--icon {
             cursor: pointer;
             overflow: visible;
-            width: 22px;
+            width: u.rem(22);
             position: absolute;
             top: u.rem(8);
             right: u.rem(24);
@@ -43,22 +39,22 @@ html {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 0 13px;
+        padding: 0 u.rem(13);
         gap: u.rem(12);
         @include u.breakpoint(medium) {
             width: u.rem(634);
         }
         &--title {
-            height: 27px;
+            height: u.rem(27);
             text-transform: uppercase;
             font-weight: 300;
             line-height: u.rem(18.75);
-            width: 275px;
+            width: u.rem(275);
         }
         &--borderLeft {
-            border-bottom: 3px solid var(--btn-green-light);
-            width: 40px;
-            margin-top: 6px;
+            border-bottom: u.rem(3) solid var(--btn-green-light);
+            width: u.rem(40);
+            margin-top: u.rem(6);
           }
     }
 }
@@ -66,41 +62,78 @@ html {
 
 .background {
     background-color: var(--background-color);
-    border-radius: 25px 25px 0 0;
+    border-radius: u.rem(25) u.rem(25) 0 0;
     position: absolute;
     width: 100%;
-    max-width: 1024px;
-    height: 1300px;
-    top: 283px;
+    max-width: u.rem(1024);
+    height: u.rem(1300);
+    top: u.rem(283);
     z-index: 8;
     @include u.breakpoint(medium) {
         top: u.rem(439);
     }
     @include u.breakpoint(large) {
-        top: 440px;
-        left: calc(50% - 1024px/2);
+        top: u.rem(440);
+        left: calc(50% - u.rem(1024)/2);
         height: u.rem(1225);
     } 
 }
 
 .image {
     background-color: var(--white);
-    background: center / 100% url('../images/restaurants/palette.jpg');
-    background-repeat: no-repeat;
+    background: url('../images/restaurants/palette.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: absolute;
     width: 100%;
-    height: 275px;
-    top: 63px;
+    height: u.rem(275);
+    top: u.rem(63);
     z-index: 0;
     @include u.breakpoint(medium) {
-        height: 383px;
-        top: 96px;
+        height: u.rem(383);
+        top: u.rem(96);
     }
     @include u.breakpoint(large) {
         height: u.rem(420);
-        top: 40px;
+        top: u.rem(40);
     }
+}
+
+.image1 {
+    background: url('../images/restaurants/note.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: u.rem(275);
+    top: u.rem(63);
+    z-index: 0;
+}
+
+.image2 {
+    background: url('../images/restaurants/francaise.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: u.rem(275);
+    top: u.rem(63);
+    z-index: 0;
+}
+
+.image3 {
+    background: url('../images/restaurants/delice.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: u.rem(275);
+    top: u.rem(63);
+    z-index: 0;
 }
 
 .footer {

@@ -41,7 +41,7 @@
 /*     &__icon {
         cursor: pointer;
         overflow: visible;
-        width: 22px;
+        width: u.rem(22);
         position: absolute;
         bottom: u.rem(33);
         right: u.rem(25);
@@ -51,12 +51,12 @@
         bottom: u.rem(33);
         right: u.rem(25);
         background: url("../images/icon/heart.svg");
-        height: 21px;
-        width: 22px;
+        height: u.rem(21);
+        width: u.rem(22);
         &:hover {
             animation: animationHeart .5s linear forwards .25s;
             background: url("../images/icon/heart-like.svg");
-            background-size: 22px 21px;
+            background-size: u.rem(22) u.rem(21);
         }
     }
 } 
@@ -76,7 +76,7 @@
     }
     &__box {
         display: flex;
-        padding: 15px;
+        padding: u.rem(15);
         align-items: flex-end;
         gap: u.rem(5);
         &--text {
@@ -84,8 +84,8 @@
             flex-direction: column; 
             justify-content: center;
             align-items: flex-start;
-            height: 42px;
-            gap: 5px;
+            height: u.rem(42);
+            gap: u.rem(5);
             & h4 {
                 font-family: u.$font-roboto;
                 line-height: u.rem(21.09);
@@ -93,41 +93,41 @@
             & p {
                 line-height: u.rem(17.63);
                 font-weight: 300;
-                font-size: 15px;
+                font-size: u.rem(15);
             }
         }
         &--price {
             display: flex;
             align-items: flex-start;
-            font-size: 15px;
+            font-size: u.rem(15);
             position: absolute;
-            right: 16px;
+            right: u.rem(16);
             transition: margin-right 450ms ease-in-out;
         }
     }
     &__selectBtn {
         background-color: #99E2D0;
-        border-radius: 0 16px 16px 0;
+        border-radius: 0 u.rem(16) u.rem(16) 0;
         position: absolute;
-        width: 59px;
-        height: 69px;
-        right: -60px;
-        top: 0px;
+        width: u.rem(59);
+        height: u.rem(69);
+        right: u.rem(-60);
+        top: 0;
         transition: margin-right 450ms ease-in-out;
         &--check {
             position: absolute;
-            top: 25px;
-            right: 20px;
+            top: u.rem(25);
+            right: u.rem(20);
             transform: rotate(0);
             transition: transform 1s ease-in-out;
         }   
     }
     &:hover .menuCard__box--price {
-        margin-right: 60px;
+        margin-right: u.rem(60);
     }
 
     &:hover .menuCard__selectBtn {
-        margin-right: 60px;
+        margin-right: u.rem(60);
         &--check {
             animation: check-rotate 0.3s linear 0.1s;
         }

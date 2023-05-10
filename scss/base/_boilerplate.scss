@@ -10,7 +10,7 @@ a, a:visited, a:active  {
     color: var(--white);
 }
 
-.card a {
+.card h3, p {
     color: var(--black);
 }
 
@@ -34,7 +34,7 @@ body  {
 }
 
 .l-header .grid {
-    max-width: 1440px;
+    max-width: u.rem(1440);
 }
 
 .footer .grid {
