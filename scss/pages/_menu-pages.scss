@@ -110,6 +110,14 @@
     height: u.rem(275);
     top: u.rem(63);
     z-index: 0;
+    @include u.breakpoint(medium) {
+        height: u.rem(383);
+        top: u.rem(96);
+    }
+    @include u.breakpoint(large) {
+        height: u.rem(420);
+        top: u.rem(40);
+    }
 }
 
 .image2 {
@@ -122,6 +130,14 @@
     height: u.rem(275);
     top: u.rem(63);
     z-index: 0;
+    @include u.breakpoint(medium) {
+        height: u.rem(383);
+        top: u.rem(96);
+    }
+    @include u.breakpoint(large) {
+        height: u.rem(420);
+        top: u.rem(40);
+    }
 }
 
 .image3 {
@@ -134,6 +150,14 @@
     height: u.rem(275);
     top: u.rem(63);
     z-index: 0;
+    @include u.breakpoint(medium) {
+        height: u.rem(383);
+        top: u.rem(96);
+    }
+    @include u.breakpoint(large) {
+        height: u.rem(420);
+        top: u.rem(40);
+    }
 }
 
 .footer {
