@@ -9,7 +9,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
     justify-content: space-between;
     position: absolute;
     width: 100%;
@@ -20,10 +19,8 @@ html {
         top: u.rem(490)
     }
     &__title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         position: relative;
+        top: 0;
         &--titre {
             font-family: u.$font-shirkhand;
             font-size: u.rem(28);
@@ -42,11 +39,15 @@ html {
         }
     }
     &__box {
-        width: u.rem(349);
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 13px;
         gap: u.rem(12);
+        @include u.breakpoint(medium) {
+            width: u.rem(634);
+        }
         &--title {
             height: 27px;
             text-transform: uppercase;
@@ -67,23 +68,19 @@ html {
     background-color: var(--background-color);
     border-radius: 25px 25px 0 0;
     position: absolute;
-    width: 375px;
+    width: 100%;
+    max-width: 1024px;
     height: 1300px;
-    left: calc(50% - 375px/2);
     top: 283px;
     z-index: 8;
     @include u.breakpoint(medium) {
         top: u.rem(439);
-        left: calc(50% - 668px/2);
-        width: u.rem(668);
-        height: u.rem(1250);
     }
     @include u.breakpoint(large) {
         top: 440px;
         left: calc(50% - 1024px/2);
-        width: u.rem(1024);
         height: u.rem(1225);
-    }
+    } 
 }
 
 .image {

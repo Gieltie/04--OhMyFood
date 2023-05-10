@@ -181,6 +181,10 @@ a, a:visited, a:active {
   color: var(--white);
 }
 
+.card a {
+  color: var(--black);
+}
+
 ul, li {
   list-style: none;
 }
@@ -599,11 +603,72 @@ body {
   color: var(--btn-purple-dark);
 }
 
+/*----- Cards -----*/
+.card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.9375rem;
+  transition: all 500ms ease-in-out;
+  /*     &__icon {
+          cursor: pointer;
+          overflow: visible;
+          width: 22px;
+          position: absolute;
+          bottom: u.rem(33);
+          right: u.rem(25);
+          } */
+}
+.card:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0.125rem 0.1875rem 1.125rem var(--btn-green-dark);
+}
+.card__img {
+  object-fit: cover;
+  width: 102%;
+  height: 14.4375rem;
+  margin: -3.5625rem -0.1875rem -0.25rem -0.1875rem;
+}
+.card__nouveau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 1.8125rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 0.8125rem;
+  right: 1.3125rem;
+  background-color: var(--btn-green-light);
+  color: var(--btn-green-dark);
+  font-size: 0.875rem;
+}
+.card__title {
+  margin: 1rem 3.75rem 0.3125rem 0.8125rem;
+}
+.card__subtitle {
+  margin: 0 5rem 0.75rem 0.8125rem;
+}
+.card__icon {
+  position: absolute;
+  bottom: 2.0625rem;
+  right: 1.5625rem;
+  background: url("../images/icon/heart.svg");
+  height: 21px;
+  width: 22px;
+}
+.card__icon:hover {
+  animation: animationHeart 0.5s linear forwards 0.25s;
+  background: url("../images/icon/heart-like.svg");
+  background-size: 22px 21px;
+}
+
 .menuCard {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 21.8125rem;
+  width: 100%;
   height: 4.3125rem;
   position: relative;
   overflow: hidden;
@@ -681,67 +746,6 @@ body {
   animation: showCardUneven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
 }
 
-/*----- Cards -----*/
-.card {
-  background-color: var(--background-color);
-  color: var(--black) !important;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
-  border-radius: 0.9375rem;
-  transition: all 500ms ease-in-out;
-  /*     &__icon {
-          position: absolute;
-          bottom: u.rem(33);
-          right: u.rem(25);
-          background: url("../images/icon/heart.svg");
-          height: 21px;
-          width: 22px;
-          &:hover {
-              background: url("../images/icon/heart-like.svg");
-          }
-      } */
-}
-.card:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0.125rem 0.1875rem 1.125rem var(--btn-green-dark);
-}
-.card__img {
-  object-fit: cover;
-  width: 102%;
-  height: 14.4375rem;
-  margin: -3.5625rem -0.1875rem -0.25rem -0.1875rem;
-}
-.card__nouveau {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 1.8125rem;
-  border-radius: 0.125rem;
-  position: absolute;
-  top: 0.8125rem;
-  right: 1.3125rem;
-  background-color: var(--btn-green-light);
-  color: var(--btn-green-dark);
-  font-size: 0.875rem;
-}
-.card__title {
-  margin: 1rem 3.75rem 0.3125rem 0.8125rem;
-}
-.card__subtitle {
-  margin: 0 5rem 0.75rem 0.8125rem;
-}
-.card__icon {
-  cursor: pointer;
-  overflow: visible;
-  width: 22px;
-  position: absolute;
-  bottom: 2.0625rem;
-  right: 1.5625rem;
-}
-
 /*----- Le Coeur Selectable -----*/
 svg .heart {
   transform-origin: center;
@@ -768,7 +772,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
   justify-content: space-between;
   position: absolute;
   width: 100%;
@@ -782,10 +785,8 @@ html {
   }
 }
 .menuWrapper__title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   position: relative;
+  top: 0;
 }
 .menuWrapper__title--titre {
   font-family: "Shrikhand", cursive;
@@ -804,11 +805,17 @@ html {
   z-index: 10;
 }
 .menuWrapper__box {
-  width: 21.8125rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0 13px;
   gap: 0.75rem;
+}
+@media (min-width: 48em) {
+  .menuWrapper__box {
+    width: 39.625rem;
+  }
 }
 .menuWrapper__box--title {
   height: 27px;
@@ -827,25 +834,21 @@ html {
   background-color: var(--background-color);
   border-radius: 25px 25px 0 0;
   position: absolute;
-  width: 375px;
+  width: 100%;
+  max-width: 1024px;
   height: 1300px;
-  left: calc(50% - 187.5px);
   top: 283px;
   z-index: 8;
 }
 @media (min-width: 48em) {
   .background {
     top: 27.4375rem;
-    left: calc(50% - 334px);
-    width: 41.75rem;
-    height: 78.125rem;
   }
 }
 @media (min-width: 64em) {
   .background {
     top: 440px;
     left: calc(50% - 512px);
-    width: 64rem;
     height: 76.5625rem;
   }
 }
