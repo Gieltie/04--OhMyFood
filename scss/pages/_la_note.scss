@@ -1,0 +1,6 @@
+@use '../util/' as u;
+
+.note_bg {
+    background: no-repeat center url('../images/restaurants/note.jpg');
+    background-size: cover;
+}

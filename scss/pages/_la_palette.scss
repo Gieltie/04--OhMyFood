@@ -1,0 +1,6 @@
+@use '../util/' as u;
+
+.palette_bg {
+    background: no-repeat center url('../images/restaurants/palette.jpg');
+    background-size: cover;
+}

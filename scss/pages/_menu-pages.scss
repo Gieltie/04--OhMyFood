@@ -1,7 +1,23 @@
 @use '../util/' as u;
 
-/*----- Les Pages Menu -----*/
+ /*----- L'image de fond -----*/
+.image {
+    position: absolute;
+    width: 100%;
+    height: u.rem(275);
+    top: u.rem(63);
+    z-index: 0;
+    @include u.breakpoint(medium) {
+        height: u.rem(340);
+        top: u.rem(31);
+    }
+    @include u.breakpoint(large) {
+        height: u.rem(471);
+        top: 0;
+    }
+}
 
+/*----- Les Pages Menu -----*/
 .menuWrapper {
     display: flex;
     flex-direction: column;
@@ -10,9 +26,12 @@
     position: absolute;
     width: 100%;
     height: u.rem(1275);
-    top: u.rem(315);
+    top: u.rem(252);
     z-index: 10;
     @include u.breakpoint(medium) {
+        top: u.rem(331)
+    }
+    @include u.breakpoint(large) {
         top: u.rem(490)
     }
     &__title {
@@ -45,6 +64,7 @@
             width: u.rem(634);
         }
         &--title {
+            position: relative;
             height: u.rem(27);
             text-transform: uppercase;
             font-weight: 300;
@@ -53,111 +73,32 @@
         }
         &--borderLeft {
             border-bottom: u.rem(3) solid var(--btn-green-light);
+            position: absolute;
+            top: 27px;
+            left: 0;
             width: u.rem(40);
-            margin-top: u.rem(6);
+            
           }
     }
 }
-
 
 .background {
     background-color: var(--background-color);
     border-radius: u.rem(25) u.rem(25) 0 0;
     position: absolute;
     width: 100%;
-    max-width: u.rem(1024);
+    max-width: u.rem(1055);
     height: u.rem(1300);
-    top: u.rem(283);
+    top: u.rem(220);
     z-index: 8;
     @include u.breakpoint(medium) {
-        top: u.rem(439);
+        top: u.rem(292);
+        height: u.rem(1250);
     }
     @include u.breakpoint(large) {
-        top: u.rem(440);
-        left: calc(50% - u.rem(1024)/2);
-        height: u.rem(1225);
+        top: u.rem(438);
+        left: calc(50% - u.rem(1055)/2);
     } 
-}
-
-.image {
-    background-color: var(--white);
-    background: url('../images/restaurants/palette.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
-    height: u.rem(275);
-    top: u.rem(63);
-    z-index: 0;
-    @include u.breakpoint(medium) {
-        height: u.rem(383);
-        top: u.rem(96);
-    }
-    @include u.breakpoint(large) {
-        height: u.rem(420);
-        top: u.rem(40);
-    }
-}
-
-.image1 {
-    background: url('../images/restaurants/note.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
-    height: u.rem(275);
-    top: u.rem(63);
-    z-index: 0;
-    @include u.breakpoint(medium) {
-        height: u.rem(383);
-        top: u.rem(96);
-    }
-    @include u.breakpoint(large) {
-        height: u.rem(420);
-        top: u.rem(40);
-    }
-}
-
-.image2 {
-    background: url('../images/restaurants/francaise.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
-    height: u.rem(275);
-    top: u.rem(63);
-    z-index: 0;
-    @include u.breakpoint(medium) {
-        height: u.rem(383);
-        top: u.rem(96);
-    }
-    @include u.breakpoint(large) {
-        height: u.rem(420);
-        top: u.rem(40);
-    }
-}
-
-.image3 {
-    background: url('../images/restaurants/delice.jpg');
-    background-size: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
-    height: u.rem(275);
-    top: u.rem(63);
-    z-index: 0;
-    @include u.breakpoint(medium) {
-        height: u.rem(383);
-        top: u.rem(96);
-    }
-    @include u.breakpoint(large) {
-        height: u.rem(420);
-        top: u.rem(40);
-    }
 }
 
 .footer {
