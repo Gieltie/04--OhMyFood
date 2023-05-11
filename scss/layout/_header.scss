@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 50;
     background-color: var(--white);
     height: u.rem(63);
     @include u.shadow(u.rem(2), u.rem(4), 0.15, u.rem(0));
