@@ -1,0 +1,94 @@
+@use '../util/' as u;
+
+.confirmation-logo {
+    background: no-repeat center url('../images/logo/ohmyfood@2x.svg');
+    background-size: contain;
+    background-color: var(--btn-green-light);
+}
+
+ /*----- L'image de fond -----*/
+ .confimage {
+    width: 100%;
+    height: u.rem(275);
+    @include u.breakpoint(medium) {
+        height: u.rem(340);
+    }
+    @include u.breakpoint(large) {
+        height: u.rem(471);
+    }
+}
+
+/*----- La confirmation -----*/
+.confirmWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 30px;
+    width: 100%;
+    height: u.rem(760);
+    top: u.rem(292);
+    z-index: 10;
+    @include u.breakpoint(medium) {
+        top: u.rem(381)
+    }
+    @include u.breakpoint(large) {
+        top: u.rem(490)
+    }
+    &__title {
+        position: relative;
+        &--titre {
+            font-family: u.$font-roboto;
+            font-size: u.rem(28);
+            line-height: u.rem(40.82);
+            width: u.rem(341);
+            height: u.rem(27);
+        }
+    }
+    &__box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 u.rem(13);
+        gap: u.rem(12);
+        @include u.breakpoint(medium) {
+            width: u.rem(634);
+        }
+        &--title {
+            position: relative;
+            height: u.rem(27);
+            text-transform: uppercase;
+            font-weight: 300;
+            line-height: u.rem(18.75);
+            width: u.rem(275);
+        }
+        &--borderLeft {
+            border-bottom: u.rem(3) solid var(--btn-purple-light);
+            position: absolute;
+            top: 27px;
+            left: 0;
+            width: u.rem(40);
+            
+          }
+    }
+}
+
+.confirmation-bg {
+    background-color: var(--background-color);
+    border-radius: u.rem(25) u.rem(25) 0 0;
+    position: absolute;
+    width: 100%;
+    max-width: u.rem(1055);
+    height: u.rem(850);
+    top: u.rem(260);
+    z-index: 8;
+    @include u.breakpoint(medium) {
+        top: u.rem(342);
+        height: u.rem(750);
+    }
+    @include u.breakpoint(large) {
+        top: u.rem(438);
+        left: calc(50% - u.rem(1055)/2);
+    } 
+}
