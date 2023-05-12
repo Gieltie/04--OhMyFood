@@ -748,22 +748,6 @@ body {
   animation: showCardUneven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
 }
 
-.even1s {
-  animation: showCardEven 1s 0.2s cubic-bezier(0, 0.02, 0.28, 1.49);
-}
-
-.even2s {
-  animation: showCardEven 1s 0.4s cubic-bezier(0, 0.02, 0.28, 1.49);
-}
-
-.even3s {
-  animation: showCardEven 1s 0.6s cubic-bezier(0, 0.02, 0.28, 1.49);
-}
-
-.even4s {
-  animation: showCardEven 1s 0.8s cubic-bezier(0, 0.02, 0.28, 1.49);
-}
-
 /*----- Le Coeur Selectable -----*/
 svg .heart {
   transform-origin: center;
@@ -955,23 +939,13 @@ svg .heart {
 }
 @media (min-width: 48em) {
   .confirmWrapper {
-    top: 23.8125rem;
+    top: 21.3125rem;
   }
 }
 @media (min-width: 64em) {
   .confirmWrapper {
     top: 30.625rem;
   }
-}
-.confirmWrapper__title {
-  position: relative;
-}
-.confirmWrapper__title--titre {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.75rem;
-  line-height: 2.55125rem;
-  width: 21.3125rem;
-  height: 1.6875rem;
 }
 .confirmWrapper__box {
   width: 100%;
@@ -1002,6 +976,12 @@ svg .heart {
   width: 2.5rem;
 }
 
+.menuCard__box--prix {
+  font-size: 0.9375rem;
+  position: absolute;
+  right: 1rem;
+}
+
 .confirmation-bg {
   background-color: var(--background-color);
   border-radius: 1.5625rem 1.5625rem 0 0;
@@ -1014,7 +994,7 @@ svg .heart {
 }
 @media (min-width: 48em) {
   .confirmation-bg {
-    top: 21.375rem;
+    top: 18.25rem;
     height: 46.875rem;
   }
 }
@@ -1023,4 +1003,20 @@ svg .heart {
     top: 27.375rem;
     left: calc(50% - 65.9375rem / 2);
   }
+}
+
+.even1s {
+  animation: showCardEven 1s 0.2s cubic-bezier(0, 0.02, 0.28, 1.49);
+}
+
+.even2s {
+  animation: showCardEven 1s 0.4s cubic-bezier(0, 0.02, 0.28, 1.49);
+}
+
+.even3s {
+  animation: showCardEven 1s 0.6s cubic-bezier(0, 0.02, 0.28, 1.49);
+}
+
+.even4s {
+  animation: showCardEven 1s 0.8s cubic-bezier(0, 0.02, 0.28, 1.49);
 }
