@@ -905,7 +905,7 @@ svg .heart {
 
 .confirmation-logo {
   background: no-repeat center url("../images/logo/ohmyfood@2x.svg");
-  background-size: contain;
+  background-size: 90%;
   background-color: var(--btn-green-light);
 }
 
@@ -988,7 +988,7 @@ svg .heart {
   position: absolute;
   width: 100%;
   max-width: 65.9375rem;
-  height: 53.125rem;
+  height: 46.875rem;
   top: 16.25rem;
   z-index: 8;
 }
