@@ -1,6 +1,5 @@
 @use 'functions' as f;
 
-/* breakpoints small:375px, medium:700px, large:900px, xlarge:1440px */
 $breakpoints-up: (
     'small': f.em(375),
     'medium': f.em(768),

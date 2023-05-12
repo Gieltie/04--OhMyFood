@@ -74,7 +74,7 @@
         &--borderLeft {
             border-bottom: u.rem(3) solid var(--btn-green-light);
             position: absolute;
-            top: 27px;
+            top: u.rem(27);
             left: 0;
             width: u.rem(40);
             

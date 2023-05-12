@@ -24,7 +24,7 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    gap: 30px;
+    gap: u.rem(30);
     width: 100%;
     height: u.rem(760);
     top: u.rem(292);
@@ -56,7 +56,7 @@
         &--borderLeft {
             border-bottom: u.rem(3) solid var(--btn-purple-light);
             position: absolute;
-            top: 27px;
+            top: u.rem(27);
             left: 0;
             width: u.rem(40);
             

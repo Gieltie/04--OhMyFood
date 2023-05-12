@@ -61,50 +61,55 @@
     }
 } 
 
+/* .menuCard {
+    @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
+    transition: box-shadow 250ms ease-in;
+    &:hover {
+        @include u.shadow(u.rem(0), u.rem(30), 0.3, u.rem(15));
+    }*/
+
 .menuCard {
-    background-color: var(--white);
+    background-color: white;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: u.rem(69);
     position: relative;
     overflow: hidden;
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
-    transition: box-shadow 250ms ease-in;
+    transition: box-shadow 250ms ease-out;
     &:hover {
         @include u.shadow(u.rem(0), u.rem(30), 0.3, u.rem(15));
     }
     &__box {
-        display: flex;
-        padding: u.rem(15);
-        align-items: flex-end;
-        gap: u.rem(5);
-        &--text {
-            display: flex;
-            flex-direction: column; 
-            justify-content: center;
-            align-items: flex-start;
-            height: u.rem(42);
-            gap: u.rem(5);
-            & h4 {
-                font-family: u.$font-roboto;
-                line-height: u.rem(21.09);
-            }
-            & p {
-                line-height: u.rem(17.63);
-                font-weight: 300;
-                font-size: u.rem(15);
-            }
+        flex: 1;
+        min-width: 0;
+        & h4, p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-left: u.rem(15);
         }
-        &--price {
-            display: flex;
-            align-items: flex-start;
+        & h4 {
+            font-family: u.$font-roboto;
+            line-height: u.rem(18);
+            font-weight: 500;
+            font-weight: normal;
+        }
+        & p {
             font-size: u.rem(15);
-            position: absolute;
-            right: u.rem(16);
-            transition: margin-right 650ms ease-in-out;
+            line-height: u.rem(17.63);
+            font-weight: 300;
+            margin-top: u.rem(5);
         }
+    }
+    &__price {
+        line-height: u.rem(18);
+        font-weight: 700;
+        padding-top: u.rem(20);
+        padding-right: u.rem(13.5);
+        white-space: nowrap;
+        transition: margin-right 650ms ease-in-out;
     }
     &__selectBtn {
         background-color: #99E2D0;
@@ -115,7 +120,6 @@
         right: u.rem(-60);
         top: 0;
         transition: margin-right 650ms ease-in-out;
-        
         &--check {
             position: absolute;
             top: u.rem(25);
@@ -124,17 +128,17 @@
             transition: transform 650ms ease-in-out;
         }   
     }
-    &:hover .menuCard__box--price {
+    &:hover .menuCard__price {
         margin-right: u.rem(60);
     }
-
+    
     &:hover .menuCard__selectBtn {
         margin-right: u.rem(60);
         &--check {
             transform: rotate(0deg);
         }
     }
-}
+  }
 
 .even {
     animation: showCardEven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
