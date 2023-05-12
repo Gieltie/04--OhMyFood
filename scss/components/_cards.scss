@@ -71,7 +71,7 @@
     position: relative;
     overflow: hidden;
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
-    transition: box-shadow 0.3s;
+    transition: box-shadow 250ms ease-in;
     &:hover {
         @include u.shadow(u.rem(0), u.rem(30), 0.3, u.rem(15));
     }
@@ -103,7 +103,7 @@
             font-size: u.rem(15);
             position: absolute;
             right: u.rem(16);
-            transition: margin-right 450ms ease-in-out;
+            transition: margin-right 650ms ease-in-out;
         }
     }
     &__selectBtn {
@@ -114,13 +114,14 @@
         height: u.rem(69);
         right: u.rem(-60);
         top: 0;
-        transition: margin-right 450ms ease-in-out;
+        transition: margin-right 650ms ease-in-out;
+        
         &--check {
             position: absolute;
             top: u.rem(25);
             right: u.rem(20);
-            transform: rotate(0);
-            transition: transform 1s ease-in-out;
+            transform: rotate(360deg);
+            transition: transform 650ms ease-in-out;
         }   
     }
     &:hover .menuCard__box--price {
@@ -130,7 +131,7 @@
     &:hover .menuCard__selectBtn {
         margin-right: u.rem(60);
         &--check {
-            animation: check-rotate 0.3s linear 0.1s;
+            transform: rotate(0deg);
         }
     }
 }

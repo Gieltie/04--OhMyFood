@@ -108,14 +108,7 @@ table {
     transform: scale(1);
   }
 }
-@keyframes check-rotate {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
+/*----- Slide des cartes menus -----*/
 @keyframes showCardEven {
   0% {
     opacity: 0;
@@ -676,7 +669,7 @@ body {
   overflow: hidden;
   box-shadow: 0 0.25rem 0.9375rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 0.9375rem;
-  transition: box-shadow 0.3s;
+  transition: box-shadow 250ms ease-in;
 }
 .menuCard:hover {
   box-shadow: 0 0rem 1.875rem 0 rgba(0, 0, 0, 0.3);
@@ -711,7 +704,7 @@ body {
   font-size: 0.9375rem;
   position: absolute;
   right: 1rem;
-  transition: margin-right 450ms ease-in-out;
+  transition: margin-right 650ms ease-in-out;
 }
 .menuCard__selectBtn {
   background-color: #99E2D0;
@@ -721,14 +714,14 @@ body {
   height: 4.3125rem;
   right: -3.75rem;
   top: 0;
-  transition: margin-right 450ms ease-in-out;
+  transition: margin-right 650ms ease-in-out;
 }
 .menuCard__selectBtn--check {
   position: absolute;
   top: 1.5625rem;
   right: 1.25rem;
-  transform: rotate(0);
-  transition: transform 1s ease-in-out;
+  transform: rotate(360deg);
+  transition: transform 650ms ease-in-out;
 }
 .menuCard:hover .menuCard__box--price {
   margin-right: 3.75rem;
@@ -737,7 +730,7 @@ body {
   margin-right: 3.75rem;
 }
 .menuCard:hover .menuCard__selectBtn--check {
-  animation: check-rotate 0.3s linear 0.1s;
+  transform: rotate(0deg);
 }
 
 .even {

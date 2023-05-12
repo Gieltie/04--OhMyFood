@@ -2,64 +2,55 @@
 
 /*----- Le Loader -----*/
 @keyframes moveLetters {
-    0% {
-      transform: translateX(u.rem(-120));
-      opacity: 0;
-    }
-    
-    33.3%, 66% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    
-    100% {
-      transform: translateX(u.rem(60));
-      opacity: 0.8;
-    }
-  }  
+  0% {
+    transform: translateX(u.rem(-120));
+    opacity: 0;
+  }
+  
+  33.3%, 66% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateX(u.rem(60));
+    opacity: 0.8;
+  }
+}  
 
 @keyframes fadeout {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-      visibility: hidden;
-    }
+  from {
+    opacity: 1;
   }
-
-/*----- Icones coeurs -----*/
-@keyframes animationHeart {
-    0% {
-        transform: scale(0.2);
-    }
-    40% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-    }
-    
-    @keyframes animationHeartApres {
-    0% {
-        transform: scale(1.4);
-    }
-    100% {
-        transform: scale(1);
-    }
-    }
-
-
-@keyframes check-rotate {	
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
+/*----- Icones coeurs -----*/
+@keyframes animationHeart {
+  0% {
+      transform: scale(0.2);
+  }
+  40% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+    
+@keyframes animationHeartApres {
+  0% {
+      transform: scale(1.4);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/*----- Slide des cartes menus -----*/
 @keyframes showCardEven {
   0% {
     opacity: 0;
