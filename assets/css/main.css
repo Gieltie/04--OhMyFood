@@ -658,14 +658,8 @@ body {
   background-size: 1.375rem 1.3125rem;
 }
 
-/* .menuCard {
-    @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
-    transition: box-shadow 250ms ease-in;
-    &:hover {
-        @include u.shadow(u.rem(0), u.rem(30), 0.3, u.rem(15));
-    }*/
 .menuCard {
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   align-items: center;
   width: 100%;
@@ -711,7 +705,7 @@ body {
   transition: margin-right 650ms ease-in-out;
 }
 .menuCard__selectBtn {
-  background-color: #99E2D0;
+  background-color: var(--btn-green-light);
   border-radius: 0 1rem 1rem 0;
   position: absolute;
   width: 3.6875rem;
@@ -928,9 +922,9 @@ svg .heart {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  gap: 1.875rem;
+  gap: 0.9375rem;
   width: 100%;
-  height: 47.5rem;
+  height: 31.25rem;
   top: 18.25rem;
   z-index: 10;
 }
@@ -973,9 +967,10 @@ svg .heart {
   width: 2.5rem;
 }
 
-.menuCard__box--prix {
+.menuCard__prix {
   font-size: 0.9375rem;
   position: absolute;
+  top: 2.5rem;
   right: 1rem;
 }
 
@@ -985,14 +980,14 @@ svg .heart {
   position: absolute;
   width: 100%;
   max-width: 65.9375rem;
-  height: 46.875rem;
+  height: 40.625rem;
   top: 16.25rem;
   z-index: 8;
 }
 @media (min-width: 48em) {
   .confirmation-bg {
     top: 18.25rem;
-    height: 46.875rem;
+    height: 40.625rem;
   }
 }
 @media (min-width: 64em) {
