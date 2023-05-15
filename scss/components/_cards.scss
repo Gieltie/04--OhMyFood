@@ -133,12 +133,50 @@
     }
   }
 
-.even {
-    animation: showCardEven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
+.even1 {
+    animation: showCardEven 1s 0.1s cubic-bezier(0, 0.02, 0.28, 1.49);
 
 }
 
-.uneven {
-    animation: showCardUneven 1s cubic-bezier(0, 0.02, 0.28, 1.49);
+.even2 {
+    animation: showCardEven 1s 0.2s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+
+.even3 {
+    animation: showCardEven 1s 0.3s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+
+.even4 {
+    animation: showCardEven 1s 0.4s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+.even5 {
+    animation: showCardEven 1s 0.5s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+
+.even6 {
+    animation: showCardEven 1s 0.6s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+
+.even7 {
+    animation: showCardEven 1s 0.7s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+.even8 {
+    animation: showCardEven 1s 0.8s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+
+.even9 {
+    animation: showCardEven 1s 0.9s cubic-bezier(0, 0.02, 0.28, 1.49);
+
+}
+
+.even10 {
+    animation: showCardEven 1s 1s cubic-bezier(0, 0.02, 0.28, 1.49);
 
 }
