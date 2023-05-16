@@ -1,18 +1,18 @@
 @use '../util/' as u;
   
 /*----- Le Coeur Selectable -----*/
-  svg .heart {
-    transform-origin: center;
-    animation: animationHeartApres .3s linear forwards;
-  }
+.checkbox {
+  display: none;
+}
 
-  .checkbox {
-    display: none;
-  }
-  
-  .checkbox:checked+label svg .heart {
-    transform: scale(0.9);
-    fill: url(#gradient);
-    animation: animationHeart .3s linear forwards .25s;
-    stroke: none;
-  }
+.checkbox:checked+label svg .heart {
+  transform: scale(0.9);
+  fill: url(#gradient);
+  animation: animationHeart .3s linear forwards .25s;
+  stroke: none;
+
+}
+svg .heart {
+  transform-origin: center;
+  animation: animationHeartApres .3s linear forwards;
+}

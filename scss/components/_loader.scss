@@ -1,7 +1,7 @@
  @use '../util/' as u;
  
  /*----- Le Loader -----*/
- .loader, .loader-gout {
+ .loader {
   background: linear-gradient(120deg, var(--btn-green-light), var(--btn-green-dark)) ;
   position: fixed;
   height: 100%;
@@ -11,28 +11,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeout 0.2s 3s forwards;
+  animation: fadeout 0.1s 3s forwards;
   opacity: 0.95;
 }
 
-.loader-gout {
-  animation: fadeout 0.2s 4s forwards;
-}
-
-.loader__text, .loader__palette {
+.loader__text {
   font-size: u.rem(40);
-  line-height: u.rem(64);
-  letter-spacing: u.rem(10);
+  letter-spacing: u.rem(4);
   display: flex;
   justify-content: space-between;
   @include u.breakpoint(medium) {
-    font-size: u.rem(80);
+    font-size: u.rem(100);
+    letter-spacing: u.rem(20);
   }
   span {
     font-family: u.$font-shirkhand;
     color: var(--btn-green-dark);
     animation: moveLetters 2s ease-in-out;
-    transform: translatex(0);
     position: relative;
     display: inline-block;
     opacity: 0;
@@ -42,12 +37,6 @@
 
 @for $i from 1 through 8 {
   .loader__text span:nth-child(#{$i}) {
-    animation-delay: $i * 0.1s;
-  }
-}
-
-@for $i from 1 through 15 {
-  .loader__palette span:nth-child(#{$i}) {
     animation-delay: $i * 0.1s;
   }
 }

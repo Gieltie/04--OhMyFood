@@ -12,8 +12,6 @@
         gap: u.rem(18);
         padding-top: u.rem(28);
         padding-bottom: u.rem(66);
-        /* animation-duration: 3s;
-        animation-name: slidein; */
         @include u.breakpoint(medium) {
             padding-bottom: u.rem(30);
             grid-template-columns: 1fr 1fr;

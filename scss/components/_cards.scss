@@ -10,6 +10,7 @@
     &:hover {
         transform: translateY(-0.2rem);
         box-shadow: u.rem(2) u.rem(3) u.rem(18) var(--btn-green-dark);
+        letter-spacing: u.rem(0.5);
     }
     &__img {
         object-fit: cover;
@@ -38,14 +39,6 @@
     &__subtitle {
         margin: 0 u.rem(80) u.rem(12) u.rem(13);
     }
-/*     &__icon {
-        cursor: pointer;
-        overflow: visible;
-        width: u.rem(22);
-        position: absolute;
-        bottom: u.rem(33);
-        right: u.rem(25);
-        } */
     &__icon {
         position: absolute;
         bottom: u.rem(33);
@@ -54,7 +47,7 @@
         height: u.rem(21);
         width: u.rem(22);
         &:hover {
-            animation: animationHeart .5s linear forwards .25s;
+            animation: animationHeart .5s linear forwards .35s;
             background: url("../images/icon/heart-like.svg");
             background-size: u.rem(22) u.rem(21);
         }
@@ -70,9 +63,9 @@
     position: relative;
     overflow: hidden;
     @include u.shadow(u.rem(4), u.rem(15), 0.1, u.rem(15));
-    transition: box-shadow 250ms ease-out;
+    transition: box-shadow 1s ease-out;
     &:hover {
-        @include u.shadow(u.rem(0), u.rem(30), 0.3, u.rem(15));
+        @include u.shadow(u.rem(5), u.rem(5), 0.3, u.rem(15));
     }
     &__box {
         flex: 1;
